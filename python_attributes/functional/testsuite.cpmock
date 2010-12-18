@@ -3,3 +3,7 @@ single_threaded
 
 # Make sure all our arguments make it through to the intercepted program
 argument_transfer
+
+# Send it a dictionary with unicode multiline strings in...
+# 
+complex_arguments
