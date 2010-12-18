@@ -5,10 +5,13 @@ executable:target.py
 filename_convention_scheme:standard
 
 link_test_path:target.py
+link_test_path:moduletomock.py
 link_test_path:capturemockrc
 copy_test_path:capturemock
 
 create_catalogues:true
+
+test_data_ignore:*.pyc
 
 # Expanded name to use for application
 full_name:CaptureMock

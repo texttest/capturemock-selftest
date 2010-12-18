@@ -1,0 +1,2 @@
+# Check we can force the server to be single-threaded, in case thread-specific methods are called
+single_threaded

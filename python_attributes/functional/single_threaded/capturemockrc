@@ -1,0 +1,6 @@
+[general]
+server_multithreaded = False
+
+[python]
+intercepts = moduletomock
+
