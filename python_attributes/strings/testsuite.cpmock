@@ -1,0 +1,10 @@
+replay
+
+# See what happens when replay doesn't match: match the arguments up and then raise an exception
+replay_fails
+
+# record the same information
+record
+
+# If we add extra things to record, don't try to do this unless recording of them is requested
+dont_record_additional

@@ -1,0 +1,5 @@
+<-PYT:import logging
+<-PYT:logging.getLevelName(50)
+->RET:'CRITICAL'
+<-PYT:logging.CRITICAL
+->RET:50

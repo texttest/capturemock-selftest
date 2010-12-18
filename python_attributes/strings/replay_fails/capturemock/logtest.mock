@@ -1,0 +1,5 @@
+<-PYT:import logging
+<-PYT:logging.CRITICAL
+->RET:542
+<-PYT:logging.getLevelName(50, "args")
+->RET:'FAKE_CRITICAL'
