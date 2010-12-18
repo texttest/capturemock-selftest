@@ -8,3 +8,6 @@ record
 
 # If we add extra things to record, don't try to do this unless recording of them is requested
 dont_record_additional
+
+# If we don't replay anything, don't fail
+no_action

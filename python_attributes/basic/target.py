@@ -4,13 +4,13 @@ from capturemock import capturemock
 
 @capturemock(rcFiles=["capturemockrc"])
 def test():
-    import logging
+    import moduletomock
     import smtplib # for testing additional filtering
 
-    print logging.getLevelName(50) + " " + str(logging.CRITICAL)
+    print moduletomock.call_function() + " " + moduletomock.attribute
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value))
+    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
     

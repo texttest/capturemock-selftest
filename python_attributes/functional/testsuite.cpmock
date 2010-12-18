@@ -1,2 +1,5 @@
 # Check we can force the server to be single-threaded, in case thread-specific methods are called
 single_threaded
+
+# Make sure all our arguments make it through to the intercepted program
+argument_transfer

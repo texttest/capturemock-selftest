@@ -1,5 +1,5 @@
-<-PYT:import logging
-<-PYT:logging.getLevelName(50)
-->RET:'CRITICAL'
-<-PYT:logging.CRITICAL
-->RET:50
+<-PYT:import moduletomock
+<-PYT:moduletomock.call_function()
+->RET:'REAL_RETURN'
+<-PYT:moduletomock.attribute
+->RET:'REAL_ATTR'
