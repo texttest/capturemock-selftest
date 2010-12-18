@@ -7,3 +7,12 @@ argument_transfer
 # Send it a dictionary with unicode multiline strings in...
 # 
 complex_arguments
+
+# Don't store floating points to arbitrary precision, makes for very unwieldy mock files
+floating_point_args
+
+# Record when we have "from x import *"
+namespace_import
+
+# Record traffic only when callers are OK
+exclude_callers

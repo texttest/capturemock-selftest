@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+from capturemock import capturemock
+
+@capturemock(rcFiles=["capturemockrc"])
+def test():
+    import moduletomock
+    floatVal = 10.0 / 3
+    print moduletomock.call_function(floatVal)
+
+try:
+    test()
+except:
+    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    

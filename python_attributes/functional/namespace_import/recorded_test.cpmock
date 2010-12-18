@@ -1,0 +1,9 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.__path__
+->RET:raise exceptions.AttributeError("'module' object has no attribute '__path__'")
+<-PYT:moduletomock.__all__
+->RET:['attribute', 'call_function']
+<-PYT:moduletomock.attribute
+->RET:'REAL_ATTR'
+<-PYT:moduletomock.call_function()
+->RET:'REAL_RETURN'
