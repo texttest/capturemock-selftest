@@ -1,0 +1,2 @@
+[python]
+intercepts = moduletomock.attribute,moduletomock.method,moduletomock.ClassName.staticMethod,nosuchmodule.nosuchattribute

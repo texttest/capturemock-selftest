@@ -1,0 +1,8 @@
+<-PYT:moduletomock.attribute
+->RET:'Fake attribute'
+<-PYT:moduletomock.method()
+->RET:'Fake method answer'
+<-PYT:moduletomock.othermethod()
+->RET:'Other Real method answer'
+<-PYT:moduletomock.ClassName.staticMethod()
+->RET:'Fake static method answer'

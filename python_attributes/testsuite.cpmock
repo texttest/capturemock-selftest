@@ -11,3 +11,7 @@ exceptions
 
 # Tests for interception involving packaged modules
 packages
+
+# tests for only intercepting certain calls to a module
+# 
+partial_interception

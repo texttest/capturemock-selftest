@@ -1,0 +1,17 @@
+# Copy of replay
+replay
+
+# record the same information
+record
+
+# If we can't import something, don't throw an exception in startup
+import_fails
+
+# If we can't find the listed attribute, don't throw an exception in startup
+bad_attribute
+
+# Just because we introduced a new thing to record doesn't mean we should automatically record it when replaying
+dont_record_additional
+
+# Add an entry and record it, while replaying what we've captured
+record_new_replay_old

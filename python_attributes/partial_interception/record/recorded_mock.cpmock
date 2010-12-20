@@ -1,0 +1,6 @@
+<-PYT:moduletomock.attribute
+->RET:'Real attribute'
+<-PYT:moduletomock.method()
+->RET:'Real method answer'
+<-PYT:moduletomock.ClassName.staticMethod()
+->RET:'Real static method answer'
