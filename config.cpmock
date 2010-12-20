@@ -6,6 +6,8 @@ filename_convention_scheme:standard
 
 link_test_path:target.py
 link_test_path:moduletomock.py
+link_test_path:moduletomock2.py
+link_test_path:indirectmodule.py
 link_test_path:capturemockrc
 copy_test_path:capturemock
 
@@ -17,5 +19,5 @@ test_data_ignore:*.pyc
 full_name:CaptureMock
 
 [collate_file]
-recorded_*:capturemock/*.mock
+recorded_mock:capturemock/*.mock
 replay_fail:capturemock/*.mock.tmp

@@ -1,0 +1,4 @@
+[python]
+intercepts = moduletomock,moduletomock2
+ignore_callers = indirectmodule
+

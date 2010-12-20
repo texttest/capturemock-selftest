@@ -16,3 +16,6 @@ namespace_import
 
 # Record traffic only when callers are OK
 exclude_callers
+
+# Check mechanism also works in subprocesses of the system under test
+replay_in_subprocess

@@ -1,0 +1,7 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.getValue(1)
+->RET:'Fake'
+<-PYT:moduletomock.getValue(3)
+->RET:'Fake'
+<-PYT:import moduletomock2
+->RET:raise exceptions.ImportError('No imports allowed from here')
