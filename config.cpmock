@@ -9,6 +9,7 @@ link_test_path:moduletomock.py
 link_test_path:moduletomock2.py
 link_test_path:indirectmodule.py
 link_test_path:capturemockrc
+link_test_path:packagetomock
 copy_test_path:capturemock
 
 create_catalogues:true
@@ -19,5 +20,5 @@ test_data_ignore:*.pyc
 full_name:CaptureMock
 
 [collate_file]
-recorded_mock:capturemock/*.mock
+recorded_mock*:capturemock/test*.mock
 replay_fail:capturemock/*.mock.tmp

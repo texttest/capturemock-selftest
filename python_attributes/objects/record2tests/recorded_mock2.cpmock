@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.getObject('name2')
+->RET:Instance('TheClass(TheBaseClass)', 'theclass1')
+<-PYT:theclass1.getNumber()
+->RET:0

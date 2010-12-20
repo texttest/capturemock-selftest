@@ -1,0 +1,6 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.object
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.getValue()
+<-PYT:moduletomock.callFunction(myobject1, param=myobject1)
+->RET:'Answer'

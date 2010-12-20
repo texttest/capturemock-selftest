@@ -1,0 +1,7 @@
+[python]
+intercepts = moduletomock
+alterations = numeric
+
+[numeric]
+match_pattern = 0
+replacement = 1

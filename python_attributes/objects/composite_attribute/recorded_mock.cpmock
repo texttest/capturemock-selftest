@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.object
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.hello
+->RET:'Hello'

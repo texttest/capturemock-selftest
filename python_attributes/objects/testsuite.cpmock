@@ -1,0 +1,31 @@
+# Copy of replay
+replay
+
+# record the same information
+record
+
+# Don't store object instances across tests
+record2tests
+
+# Check we can add filtering to whatever is produced in the file, and hence change the result...
+# 
+alter_response
+
+# If we return e.g. datetime.datetime we shouldn't be intercepting it
+object_not_intercepted
+
+# If we return an object that lives in a submodule we should be intercepting it
+# 
+object_in_submodule
+
+# Check we can call methods in objects that are attributes of the module
+object_as_attribute
+
+# Check we can read attributes of attributes
+composite_attribute
+
+# Check we can assign attributes to stored objects
+attribute_assignment
+
+# What happens if objects that can't be reconstructed are passed as arguments
+unusable_object_args

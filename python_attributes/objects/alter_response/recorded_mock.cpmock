@@ -1,0 +1,8 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.getObject('''Some Multiline
+String''')
+->RET:Instance('TheClass(TheBaseClass)', 'theclass1')
+<-PYT:theclass1.getNumber()
+->RET:1
+<-PYT:theclass1.nonsense
+->RET:raise exceptions.AttributeError("TheClass instance has no attribute 'nonsense'")

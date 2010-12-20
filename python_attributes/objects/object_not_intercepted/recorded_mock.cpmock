@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.get_date1()
+->RET:datetime.date(2010, 5, 4)
+<-PYT:moduletomock.get_date2()
+->RET:datetime.date(2010, 4, 24)

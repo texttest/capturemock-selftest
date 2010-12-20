@@ -1,0 +1,9 @@
+The following new files/directories were created:
+<Test Directory>
+----capturemock
+--------test2.mock
+
+The following existing files/directories changed their contents:
+<Test Directory>
+----capturemock
+--------test.mock

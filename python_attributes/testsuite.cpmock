@@ -2,3 +2,6 @@ basic
 
 # Tests not using object orientation
 functional
+
+# Tests for object-oriented code
+objects
