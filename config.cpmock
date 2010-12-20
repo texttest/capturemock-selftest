@@ -22,3 +22,7 @@ full_name:CaptureMock
 [collate_file]
 recorded_mock*:capturemock/test*.mock
 replay_fail:capturemock/*.mock.tmp
+
+[run_dependent_text]
+stdout:0x[0-9a-f]*{REPLACE <pointer>}
+recorded_mock*:0x[0-9a-f]*{REPLACE <pointer>}

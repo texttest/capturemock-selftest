@@ -29,3 +29,6 @@ attribute_assignment
 
 # What happens if objects that can't be reconstructed are passed as arguments
 unusable_object_args
+
+# Check we can handle standard collections containing objects
+collections

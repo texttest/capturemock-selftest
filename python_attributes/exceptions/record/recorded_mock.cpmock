@@ -1,0 +1,16 @@
+<-PYT:import moduletomock
+<-PYT:import no_such_module
+->RET:raise exceptions.ImportError('No module named no_such_module')
+<-PYT:moduletomock.no_such_method
+->RET:raise exceptions.AttributeError("'module' object has no attribute 'no_such_method'")
+<-PYT:moduletomock.call_function('argument', faking=True)
+->RET:raise exceptions.TypeError("call_function() got an unexpected keyword argument 'faking'")
+<-PYT:import urllib2
+<-PYT:urllib2.urlopen('foo://no.such.site')
+->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror1')
+<-PYT:urlerror1.args
+->RET:('unknown url type: foo',)
+<-PYT:urllib2.urlopen('foo://another.no.such.site')
+->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror2')
+<-PYT:urlerror2.__str__()
+->RET:'<urlopen error unknown url type: foo>'

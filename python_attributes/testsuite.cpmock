@@ -5,3 +5,6 @@ functional
 
 # Tests for object-oriented code
 objects
+
+# Check we can capture exceptions that are thrown and replay them
+exceptions
