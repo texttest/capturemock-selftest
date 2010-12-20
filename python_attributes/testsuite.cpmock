@@ -8,3 +8,6 @@ objects
 
 # Check we can capture exceptions that are thrown and replay them
 exceptions
+
+# Tests for interception involving packaged modules
+packages
