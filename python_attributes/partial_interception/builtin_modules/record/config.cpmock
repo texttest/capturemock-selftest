@@ -1,0 +1,4 @@
+# Don't care what date it actually is... but there shouldn't be other diffs
+[run_dependent_text]
+recorded_mock:[0-9]{4}, [0-9]{1,2}, [0-9]{1,2}{REPLACE <date/time>}
+stdout:Today{WORD -1}{REPLACE <date/time>}

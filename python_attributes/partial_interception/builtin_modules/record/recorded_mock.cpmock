@@ -1,0 +1,2 @@
+<-PYT:datetime.date.today()
+->RET:datetime.date(2011, 1, 13)

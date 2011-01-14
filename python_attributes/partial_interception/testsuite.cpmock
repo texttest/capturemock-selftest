@@ -23,3 +23,6 @@ ignore_calls_from_stdlib
 
 # Check we can name and exclude certain calling modules
 ignore_calls_from_named
+
+# Test we can handle builtin modules. datetime is only builtin on Windows but it's a very common usage.
+builtin_modules
