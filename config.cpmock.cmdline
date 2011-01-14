@@ -1,0 +1,3 @@
+
+[run_dependent_text]
+recorded_mock:{INTERNAL writedir}{REPLACE <sandbox>}

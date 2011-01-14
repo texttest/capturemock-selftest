@@ -1,20 +1,26 @@
-# Full path to the System Under Test
-executable:target.py
+
+executable:${TEXTTEST_CHECKOUT}/bin/capturemock
+
+# Mechanism for keeping site-specific setup separate
+extra_search_directory:site
+extra_search_directory:default_site
+
+import_config_file:site_configfile
+
+extra_version:python
+extra_version:cmdline
+
+unsaveable_version:python
+unsaveable_version:cmdline
 
 # Naming scheme to use for files for stdin,stdout and stderr
 filename_convention_scheme:standard
 
 link_test_path:target.py
-link_test_path:moduletomock.py
-link_test_path:moduletomock2.py
-link_test_path:indirectmodule.py
 link_test_path:capturemockrc
-link_test_path:packagetomock
 copy_test_path:capturemock
 
 create_catalogues:true
-
-test_data_ignore:*.pyc
 
 # Expanded name to use for application
 full_name:CaptureMock
@@ -22,7 +28,3 @@ full_name:CaptureMock
 [collate_file]
 recorded_mock*:capturemock/test*.mock
 replay_fail:capturemock/*.mock.tmp
-
-[run_dependent_text]
-stdout:0x[0-9a-f]*{REPLACE <pointer>}
-recorded_mock*:0x[0-9a-f]*{REPLACE <pointer>}
