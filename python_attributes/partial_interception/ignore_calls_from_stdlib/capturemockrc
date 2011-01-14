@@ -1,0 +1,4 @@
+[python]
+intercepts = os.getpid,inspect.getouterframes
+ignore_callers = coverage
+

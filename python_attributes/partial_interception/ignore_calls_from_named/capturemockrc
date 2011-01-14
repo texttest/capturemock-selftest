@@ -1,0 +1,3 @@
+[python]
+intercepts = moduletomock.attribute,moduletomock.method,moduletomock.ClassName.staticMethod
+ignore_callers = target

@@ -15,3 +15,11 @@ dont_record_additional
 
 # Add an entry and record it, while replaying what we've captured
 record_new_replay_old
+
+# If the thing we intercept is called by the standard library, don't intercept that.
+# For example os.getpid being called from 'logging'
+# 
+ignore_calls_from_stdlib
+
+# Check we can name and exclude certain calling modules
+ignore_calls_from_named
