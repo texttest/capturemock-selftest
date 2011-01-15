@@ -1,0 +1,14 @@
+<-CMD:some_nonsense
+->ERR:don't be silly
+<-CMD:firstcall -a -b -c "hello | goodbye" and some other arguments
+->OUT:firstcall called with 5 arguments
+The time is now Mon Aug 28 12:28:33 2006
+->EXC:1
+<-CMD:firstcall -a -b -c "hello | goodbye" and some different arguments
+->OUT:firstcall called with 5 arguments
+The time is now Mon Aug 28 12:28:34 2006
+->EXC:1
+<-CMD:secondcall -c -x -and some other arguments
+->OUT:The process ID is fake
+->ERR:secondcall called with ['-c', '-x'] as arguments
+MY_ENV_VAR = 'value'

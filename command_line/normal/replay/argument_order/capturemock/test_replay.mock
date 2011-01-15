@@ -1,0 +1,6 @@
+<-CMD:firstcall arg1 arg2
+->OUT:Forwards
+<-CMD:firstcall arg2 arg1
+->OUT:Backwards
+<-CMD:firstcall arg1 arg2
+->OUT:Forwards again

@@ -1,0 +1,4 @@
+<-CMD:firstcall arg3 arg1 arg2 arg3
+->OUT:Right
+<-CMD:firstcall arg1 arg3
+->OUT:Wrong

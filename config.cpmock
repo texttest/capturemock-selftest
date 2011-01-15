@@ -16,6 +16,7 @@ unsaveable_version:cmdline
 # Naming scheme to use for files for stdin,stdout and stderr
 filename_convention_scheme:standard
 
+link_test_path:logging
 link_test_path:target.py
 link_test_path:capturemockrc
 copy_test_path:capturemock

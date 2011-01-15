@@ -1,0 +1,8 @@
+In syscalls.py now
+firstcall called with 5 arguments
+The time is now Sat Jan 15 20:54:44 2011
+firstcall exited with status 1
+firstcall called with 5 arguments
+The time is now Sat Jan 15 20:54:44 2011
+The current working directory is tmpdir
+The process ID is fake

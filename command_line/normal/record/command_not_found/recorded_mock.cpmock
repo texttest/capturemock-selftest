@@ -1,0 +1,3 @@
+<-CMD:no_such_program -a arg1 -b arg2
+->ERR:ERROR: CaptureMock Server could not find command 'no_such_program' in PATH
+->EXC:1

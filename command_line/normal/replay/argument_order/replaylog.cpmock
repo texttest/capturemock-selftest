@@ -1,0 +1,19 @@
+Replay INFO - Replay info OrderedDict([('<-CMD:firstcall arg1 arg2', [['->OUT:Forwards\n'], ['->OUT:Forwards again\n']]), ('<-CMD:firstcall arg2 arg1', [['->OUT:Backwards\n']])])
+Replay INFO - Trying to match '<-CMD:firstcall arg1 arg2 arg3'
+Replay INFO - Comparing with '<-CMD:firstcall arg1 arg2'
+Replay INFO - Words in common 3 vs 0
+Replay INFO - Comparing with '<-CMD:firstcall arg2 arg1'
+Replay INFO - Words in common 2 vs 3
+Replay INFO - Best match chosen as '<-CMD:firstcall arg1 arg2'
+Replay INFO - Trying to match '<-CMD:firstcall arg2 arg1 arg3'
+Replay INFO - Comparing with '<-CMD:firstcall arg1 arg2'
+Replay INFO - Words in common 2 vs 0
+Replay INFO - Comparing with '<-CMD:firstcall arg2 arg1'
+Replay INFO - Words in common 3 vs 2
+Replay INFO - Best match chosen as '<-CMD:firstcall arg2 arg1'
+Replay INFO - Trying to match '<-CMD:firstcall arg1 arg2 arg3'
+Replay INFO - Comparing with '<-CMD:firstcall arg1 arg2'
+Replay INFO - Words in common 3 vs 0
+Replay INFO - Comparing with '<-CMD:firstcall arg2 arg1'
+Replay INFO - Words in common 2 vs 3
+Replay INFO - Best match chosen as '<-CMD:firstcall arg1 arg2'

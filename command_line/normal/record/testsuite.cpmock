@@ -1,2 +1,8 @@
 # Check we can record a mock from the command line
 basic
+
+# Allow several different programs at the same time, make sure we record them in the right order...
+concurrent_traffic
+
+# Record can't find what it's supposed to record
+command_not_found

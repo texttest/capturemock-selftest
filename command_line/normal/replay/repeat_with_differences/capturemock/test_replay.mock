@@ -1,0 +1,14 @@
+<-CMD:firstcall -a -wrong -c "hello | goodbye"
+->OUT:firstcall called with 5 arguments
+The time is now Wed Apr 11 13:55:00 2007
+->EXC:1
+<-CMD:firstcall -a -wrong -c "hello | goodbye"
+->OUT:firstcall called with 5 arguments
+The time is now Wed Apr 11 13:58:00 2007
+<-CMD:firstcall -a -silly -c "hello | goodbye"
+->ERR:Don't be silly!
+->EXC:1
+<-CMD:cd /users/geoff/texttesttmp/dynamic_gui.10Jun120229.15123/traffic/TestRepeatDiffs/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+->OUT:The process ID is fake
+->ERR:secondcall called with ['-c', '-x'] as arguments
+MY_ENV_VAR = 'value'
