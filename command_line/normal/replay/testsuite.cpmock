@@ -1,0 +1,17 @@
+# Make sure we can replay some matching traffic and it can work...
+matching
+
+# If we're replaying, don't record additional stuff even if it matches our intercepts
+partial_mock
+
+# Replay a mock file with some funny things in it
+replay_bad_mock
+
+# Check for repeated traffic where we don't get a response second time around
+no_response_on_repeat
+
+# Check the best-match approach can handle repeated but equal differences
+repeat_with_differences
+
+# We choose the least number of non-matching sequences, irrespective of how long they are
+non_matching_sequences

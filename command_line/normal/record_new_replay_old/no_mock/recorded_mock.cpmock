@@ -6,7 +6,7 @@ The time is now Sat Jan 15 20:56:20 2011
 ->OUT:firstcall called with 5 arguments
 The time is now Sat Jan 15 20:56:21 2011
 ->EXC:1
-<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan205619.7564/cpmock.cmdline/command_line/normal/record_new_no_old/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan205619.7564/cpmock.cmdline/command_line/normal/record_new_replay_old/no_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
 ->OUT:The current working directory is tmpdir
 The process ID is 7581
 ->ERR:secondcall called with ['-c', '-x'] as arguments

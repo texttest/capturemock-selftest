@@ -1,14 +1,11 @@
-# Make sure we can replay some matching traffic and it can work...
-replay
-
-# Check we can re-record traffic from the command line
-record
-
 # Replay mode but no replay file, do nothing
 no_action
 
-# Record the new traffic, while replaying the old part
-record_new_replay_old
+# Tests for replaying from existing mocks
+replay
 
-# Don't fail if in "composite" mode with no replay file
-record_new_no_old
+# Tests for recording
+record
+
+# Tests for mode 2, i.e. recording and replaying
+record_new_replay_old

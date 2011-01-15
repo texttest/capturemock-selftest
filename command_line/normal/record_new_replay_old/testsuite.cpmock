@@ -1,0 +1,5 @@
+# Use as intended, with a partial mock already there
+partial_mock
+
+# Don't fail if in "composite" mode with no replay file
+no_mock
