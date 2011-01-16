@@ -1,0 +1,8 @@
+basic
+
+# If we can't get the names to match exactly, do a best guess based on the start and end of the file
+non_matching_filenames
+
+# Make sure we don't utterly fall over if recorded mock refers to files that aren't there
+# 
+bad_file_references

@@ -1,0 +1,4 @@
+<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.16Jan211053.10731/cpmock.cmdline/command_line/file_editing/record/cwd_changes/tmpdir; editor_with_sideeffects /home/geoff/.texttest/tmp/cpmock.cmdline.16Jan211053.10731/cpmock.cmdline/command_line/file_editing/record/cwd_changes/tmpdir/file
+->FIL:tmpdir
+->OUT:Editing file file
+Editing file sideeffect

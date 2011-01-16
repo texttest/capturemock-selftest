@@ -1,0 +1,6 @@
+[command line]
+intercepts = noneditor,editor
+
+[noneditor]
+asynchronous = True
+

@@ -1,0 +1,5 @@
+replay
+record
+
+# Handle files that get edited after the program has apparently exited
+asynchronous_edits

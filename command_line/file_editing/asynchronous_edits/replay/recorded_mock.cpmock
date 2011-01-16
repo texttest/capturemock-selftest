@@ -1,0 +1,4 @@
+<-CMD:editor /home/geoff/.texttest/tmp/cpmock.cmdline.16Jan205410.10416/cpmock.cmdline/command_line/file_editing/asynchronous_edits/replay/file
+<-CMD:editor otherfile
+->FIL:file
+<-CMD:editor otherfile2

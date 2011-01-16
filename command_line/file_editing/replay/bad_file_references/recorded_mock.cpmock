@@ -1,0 +1,8 @@
+<-CMD:editor file
+->OUT:Editing file file
+<-CMD:editor file2
+->OUT:Editing file file2
+<-CMD:editor writedir
+->OUT:Editing file writedir/subdir/file
+<-CMD:editor file
+->OUT:Editing file file

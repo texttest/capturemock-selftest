@@ -1,0 +1,4 @@
+<-CMD:editor /nfs/vm/texttest-tmp/geoff/texttest.29Sep145010.30269/texttest/TestSelf/TrafficInterception/FileEditing/Console/ReplayAsychronous/texttesttmp/console.29Sep145013.30274/edit/Test/file
+<-CMD:editor otherfile
+->FIL:file
+<-CMD:editor otherfile2

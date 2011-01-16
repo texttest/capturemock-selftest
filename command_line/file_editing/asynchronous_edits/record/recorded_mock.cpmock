@@ -1,0 +1,5 @@
+<-CMD:editor.py file
+->OUT:Editing file file
+->FIL:file
+<-CMD:editor.py file2
+->OUT:Editing file file2

@@ -1,0 +1,9 @@
+copy_test_path:file
+copy_test_path:file2
+copy_test_path:writedir
+
+[collate_file]
+editedfil*:fil*
+editedfile3:writedir/*/file
+recordedfil*:*/test_recorded.files/fil*
+recordedfile3:*/test_recorded.files/*/*/file

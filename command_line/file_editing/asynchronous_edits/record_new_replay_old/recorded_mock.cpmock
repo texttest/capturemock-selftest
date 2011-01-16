@@ -1,0 +1,5 @@
+<-CMD:noneditor file
+->OUT:Not editing the file
+<-CMD:editor file
+->FIL:file
+->OUT:Editing file file
