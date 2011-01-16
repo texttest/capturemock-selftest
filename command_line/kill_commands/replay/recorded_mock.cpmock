@@ -1,0 +1,3 @@
+<-CMD:dosleep 100
+->OUT:Fake text sleeping for 100 seconds...
+->EXC:-15

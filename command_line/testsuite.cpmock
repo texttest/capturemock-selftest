@@ -1,2 +1,5 @@
 # Tests with no additional complications like files to edit or killing going on...
 normal
+
+# Tests for third-party programs that also get killed by the SUT
+kill_commands
