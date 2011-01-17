@@ -6,8 +6,7 @@ from capturemock import capturemock
 def test():
     import os, subprocess
 
-    pyfile = os.path.join(os.getenv("TEXTTEST_ROOT"), "target.py")
-    subprocess.call([ "python", pyfile ])
+    subprocess.call([ "python", "subproc.py" ])
 
 try:
     test()
