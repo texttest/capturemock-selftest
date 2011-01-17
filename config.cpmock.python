@@ -10,5 +10,5 @@ test_data_ignore:*.pyc
 test_data_ignore:packagetomock
 
 [run_dependent_text]
-stdout:0x[0-9a-f]*{REPLACE <pointer>}
-recorded_mock*:0x[0-9a-f]*{REPLACE <pointer>}
+stdout:0x[0-9a-fA-F]*{REPLACE <pointer>}
+recorded_mock*:0x[0-9a-fA-F]*{REPLACE <pointer>}
