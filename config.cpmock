@@ -7,6 +7,8 @@ extra_search_directory:default_site
 
 import_config_file:site_configfile
 
+home_operating_system:none
+
 extra_version:python
 extra_version:cmdline
 
