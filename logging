@@ -30,7 +30,7 @@ qualname=Replay
 class=FileHandler
 formatter=debug
 args=(os.devnull, 'a')
-#args=('trafficreplay.diag', 'a')
+#args=('replay.cpmock', 'a')
 
 # ======= Section for Server ======
 [logger_Server]
@@ -42,7 +42,7 @@ qualname=Server
 class=FileHandler
 formatter=debug
 args=(os.devnull, 'a')
-#args=('%(TEXTTEST_CWD)s/trafficserver.texttest', 'a')
+#args=('server.cpmock', 'a')
 
 # ====== Cruft that python logging module needs ======
 [loggers]
