@@ -1,2 +1,5 @@
 # Tests for interception of command line programs
 command_line
+
+# Tests for intercepting synchronous traffic over a network
+client_server

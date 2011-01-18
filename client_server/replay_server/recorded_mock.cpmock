@@ -1,0 +1,7 @@
+<-SRV:Started string-length server at 192.168.99.120:41241
+->CLI:Here is a string
+->CLI:Here is a longer string
+<-SRV:Length was 24
+->CLI:Don't answer this one
+->CLI:terminate
+<-SRV:Exiting...
