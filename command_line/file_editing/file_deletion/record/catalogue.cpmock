@@ -1,0 +1,19 @@
+The following new files/directories were created:
+<Test Directory>
+----capturemock
+--------test.mock
+--------test_recorded.files
+------------file.CAPTUREMOCK_DELETION
+------------writedir
+----------------file2.CAPTUREMOCK_DELETION
+----------------file3.CAPTUREMOCK_DELETION
+----------------subsubdir.CAPTUREMOCK_DELETION
+
+The following existing files/directories were deleted:
+<Test Directory>
+----file
+----writedir
+--------file2
+--------file3
+--------subsubdir
+------------file4

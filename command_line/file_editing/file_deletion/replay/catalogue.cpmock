@@ -1,0 +1,13 @@
+The following new files/directories were created:
+<Test Directory>
+----capturemock
+--------test.mock
+
+The following existing files/directories were deleted:
+<Test Directory>
+----file
+----writedir
+--------file2
+--------file3
+--------subsubdir
+------------file4
