@@ -2,6 +2,6 @@
 
 import os
 
-os.system("editor.py " + os.path.abspath("file"))
-os.system("editor.py " + os.path.abspath("writedir"))
-os.system("editor.py no_such_file")
+os.system("delete_editor " + os.path.abspath("file"))
+os.system("delete_editor " + os.path.abspath("writedir"))
+os.system("delete_editor no_such_file")

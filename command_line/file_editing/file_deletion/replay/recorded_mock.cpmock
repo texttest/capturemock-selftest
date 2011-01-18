@@ -1,10 +1,10 @@
-<-CMD:editor.py /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.18Jan110438.13676/cpmock.cmdline/command_line/file_editing/file_deletion/replay/file
+<-CMD:delete_editor /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.18Jan131057.17252/cpmock.cmdline/command_line/file_editing/file_deletion/replay/file
 ->FIL:file
 ->OUT:Removing file file
-<-CMD:editor.py /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.18Jan110438.13676/cpmock.cmdline/command_line/file_editing/file_deletion/replay/writedir
+<-CMD:delete_editor /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.18Jan131057.17252/cpmock.cmdline/command_line/file_editing/file_deletion/replay/writedir
 ->FIL:writedir
 ->OUT:Removing file file2
 Removing file file3
 Removing file subsubdir
-<-CMD:editor.py no_such_file
+<-CMD:delete_editor no_such_file
 ->OUT:No such file no_such_file
