@@ -6,6 +6,3 @@ asynchronous_edits
 
 # Track files that get deleted as well as changed
 file_deletion
-
-# Tests for recording/replaying edits of links on UNIX
-symbolic_links

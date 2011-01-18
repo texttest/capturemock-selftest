@@ -1,3 +1,6 @@
+# A favourite program name in these tests...
+link_test_path:editor.py
+
 copy_test_path:file
 copy_test_path:file2
 copy_test_path:writedir
@@ -7,3 +10,4 @@ editedfil*:fil*
 editedfile3:writedir/*/file
 recordedfil*:*/test_recorded.files/fil*
 recordedfile3:*/test_recorded.files/*/*/file
+recorded_*:*/test_recorded.files/*/*.CAPTUREMOCK_SYMLINK
