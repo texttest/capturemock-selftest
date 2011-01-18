@@ -1,3 +1,4 @@
+crap at the start
 <-CMD:some_nonsense
 ->ERR:don't be silly
 <-CMD:firstcall -a -b -c "hello | goodbye" and some other arguments
