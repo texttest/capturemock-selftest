@@ -1,5 +1,8 @@
 replay
 
+# Check we can pass the python attribute directly without an rc file
+replay_without_rcfile
+
 # See what happens when replay doesn't match: match the arguments up and then raise an exception
 replay_fails
 
