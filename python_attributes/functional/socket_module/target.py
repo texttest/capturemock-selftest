@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+
+from capturemock import capturemock
+
+@capturemock("socket")
+def test():
+    import socket
+    
+    print socket.gethostname()
+
+try:
+    test()
+except:
+    import sys; sys.stderr.write(str(sys.exc_value))
+    
+

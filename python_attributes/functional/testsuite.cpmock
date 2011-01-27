@@ -5,7 +5,6 @@ single_threaded
 argument_transfer
 
 # Send it a dictionary with unicode multiline strings in...
-# 
 complex_arguments
 
 # Don't store floating points to arbitrary precision, makes for very unwieldy mock files
@@ -13,6 +12,12 @@ floating_point_args
 
 # Record when we have "from x import *"
 namespace_import
+
+# Intercepting 'socket' is a special case, because capturemock uses it internally
+socket_module
+
+# Intercepting 'socket' is a special case, because capturemock uses it internally. Shouldn't record it if it isn't used...
+socket_module_unused
 
 # Record traffic only when callers are OK
 exclude_callers

@@ -1,0 +1,3 @@
+<-PYT:import socket
+<-PYT:socket.gethostname()
+->RET:'sofa-pc'
