@@ -1,0 +1,3 @@
+[run_dependent_text]
+stdout:.*
+recorded_mock:RET:'.*'{REPLACE RET:'<machine>'}
