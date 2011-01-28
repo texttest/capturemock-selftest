@@ -2,7 +2,7 @@
 
 from capturemock import capturemock
 
-@capturemock("socket")
+@capturemock(rcFiles=["capturemockrc"], mode=1)
 def test():
     print "Hello world!"
 

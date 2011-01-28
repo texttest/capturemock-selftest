@@ -1,0 +1,4 @@
+[python]
+intercepts = moduletomock
+ignore_callers = coverage
+
