@@ -1,0 +1,5 @@
+WARNING: having to reset the variable 'mysystem.mtm'.
+This implies you are intercepting the module 'packagetomock' after importing it.
+While this might work, it may well be very slow and is not recommended.
+
+REAL_RETURN REAL_ATTR

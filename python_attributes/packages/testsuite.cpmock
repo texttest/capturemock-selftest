@@ -4,5 +4,9 @@ object_in_submodule
 # If we intercept the parent package, we should pick up stuff when the module is directly imported
 intercept_parent
 
+# If we intercept the parent package, we should pick up stuff when the module is directly imported. Also
+# if this has already happened
+intercept_parent_prev_import
+
 # Check we can intercept just a submodule
 intercept_submodule

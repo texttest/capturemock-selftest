@@ -1,1 +1,5 @@
+WARNING: having to reset the variable 'mysystem.moduletomock'.
+This implies you are intercepting the module 'moduletomock' after importing it.
+While this might work, it may well be very slow and is not recommended.
+
 FAKE_RETURN FAKE_ATTR
