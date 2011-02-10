@@ -1,6 +1,9 @@
 # Check we can record a mock from the command line
 basic
 
+# Check we don't bail out if intercept list is empty
+empty_intercepts
+
 # Allow several different programs at the same time, make sure we record them in the right order...
 concurrent_traffic
 
