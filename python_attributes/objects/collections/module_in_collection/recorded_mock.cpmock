@@ -1,0 +1,3 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.get_dates()
+->RET:{'started': datetime.date(2010, 4, 14), 'finished': datetime.date(2010, 4, 24)}
