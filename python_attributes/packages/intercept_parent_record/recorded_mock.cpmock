@@ -1,0 +1,11 @@
+<-PYT:import packagetomock
+<-PYT:packagetomock.__path__
+->RET:['Fake value just to mark that it exists']
+<-PYT:import packagetomock.sub
+<-PYT:packagetomock.sub.__path__
+->RET:['Fake value just to mark that it exists']
+<-PYT:import packagetomock.sub.moduletomock
+<-PYT:packagetomock.sub.moduletomock.call_function()
+->RET:'REAL_RETURN'
+<-PYT:packagetomock.sub.moduletomock.attribute
+->RET:'REAL_ATTR'

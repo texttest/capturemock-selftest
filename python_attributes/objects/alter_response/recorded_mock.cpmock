@@ -3,6 +3,6 @@
 String''')
 ->RET:Instance('TheClass(TheBaseClass)', 'theclass1')
 <-PYT:theclass1.getNumber()
-->RET:1
+->RET:The Number Zero
 <-PYT:theclass1.nonsense
 ->RET:raise exceptions.AttributeError("TheClass instance has no attribute 'nonsense'")

@@ -16,9 +16,5 @@ def test():
     except ImportError:
         print "Failed to import bad module as expected"
 
-try:
-    test()
-except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
-    
+test()
 

@@ -4,4 +4,4 @@ alterations = numeric
 
 [numeric]
 match_pattern = 0
-replacement = 1
+replacement = The Number Zero

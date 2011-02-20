@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from capturemock import capturemock
-
+from capturemock import capturemock, CaptureMockReplayError
+    
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import packagetomock.sub.moduletomock
@@ -10,6 +10,6 @@ def test():
 
 try:
     test()
-except:
+except CaptureMockReplayError:
     import sys; sys.stderr.write(str(sys.exc_value) + "\n")
     

@@ -2,7 +2,10 @@
 object_in_submodule
 
 # If we intercept the parent package, we should pick up stuff when the module is directly imported
-intercept_parent
+intercept_parent_replay
+
+# If we intercept the parent package, we should pick up stuff when the module is directly imported
+intercept_parent_record
 
 # If we intercept the parent package, we should pick up stuff when the module is directly imported. Also
 # if this has already happened

@@ -1,3 +1,0 @@
-<-PYT:import moduletomock
-<-PYT:moduletomock.threadCount()
-->RET:1
