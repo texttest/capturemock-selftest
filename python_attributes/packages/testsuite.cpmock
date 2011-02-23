@@ -7,6 +7,9 @@ intercept_parent_replay
 # If we intercept the parent package, we should pick up stuff when the module is directly imported
 intercept_parent_record
 
+# If we intercept the parent package, we should pick up stuff when the module is directly imported. And the second test should work properly...
+intercept_parent_2tests
+
 # If we intercept the parent package, we should pick up stuff when the module is directly imported. Also
 # if this has already happened
 intercept_parent_prev_import
