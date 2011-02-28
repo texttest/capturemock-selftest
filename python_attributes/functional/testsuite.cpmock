@@ -21,3 +21,6 @@ exclude_callers
 
 # Check mechanism also works in subprocesses of the system under test
 replay_in_subprocess
+
+# If the subprocess does nothing, it shouldn't wipe the parent process's file
+subprocess_no_action

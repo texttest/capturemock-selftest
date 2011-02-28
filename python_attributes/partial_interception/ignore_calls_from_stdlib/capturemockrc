@@ -2,3 +2,6 @@
 intercepts = os.getpid,inspect.getouterframes
 ignore_callers = coverage
 
+[general]
+# Test uses logging module, don't let CaptureMock's internal logging interfere
+log_config_file = no_such_file
