@@ -24,3 +24,6 @@ replay_in_subprocess
 
 # If the subprocess does nothing, it shouldn't wipe the parent process's file
 subprocess_no_action
+
+# If the subprocess does relevant stuff, it should append to the same file
+subprocess_append
