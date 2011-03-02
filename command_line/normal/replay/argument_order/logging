@@ -24,7 +24,7 @@ format=%(name)s %(levelname)s - %(message)s
 [logger_Replay]
 handlers=Replay
 qualname=Replay
-level=INFO
+level=DEBUG
 
 [handler_Replay]
 class=FileHandler
@@ -36,7 +36,7 @@ args=('replaylog.cpmock', 'a')
 [logger_Server]
 handlers=Server
 qualname=Server
-#level=INFO
+#level=DEBUG
 
 [handler_Server]
 class=FileHandler
