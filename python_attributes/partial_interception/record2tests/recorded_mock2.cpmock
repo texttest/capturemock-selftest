@@ -1,0 +1,4 @@
+<-PYT:moduletomock.attribute
+->RET:'Real attribute'
+<-PYT:moduletomock.method()
+->RET:'Real method answer'

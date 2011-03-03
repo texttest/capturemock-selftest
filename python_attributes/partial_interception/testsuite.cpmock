@@ -4,6 +4,9 @@ replay
 # record the same information
 record
 
+# record the same information
+record2tests
+
 # If we can't import something, don't throw an exception in startup
 import_fails
 
@@ -18,7 +21,6 @@ record_new_replay_old
 
 # If the thing we intercept is called by the standard library, don't intercept that.
 # For example os.getpid being called from 'logging'
-# 
 ignore_calls_from_stdlib
 
 # Check we can name and exclude certain calling modules
