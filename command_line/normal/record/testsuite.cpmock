@@ -4,6 +4,9 @@ basic
 # Check we don't bail out if intercept list is empty
 empty_intercepts
 
+# Write warnings if absolute paths provided for intercepts
+absolute_intercepts
+
 # Allow several different programs at the same time, make sure we record them in the right order...
 concurrent_traffic
 

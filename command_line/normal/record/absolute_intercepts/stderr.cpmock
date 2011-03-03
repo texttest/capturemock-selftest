@@ -1,0 +1,4 @@
+WARNING: Ignoring requested intercept of command '/some/absolute/path'.
+CaptureMock intercepts commands via PATH and cannot do anything with absolute paths.
+secondcall called with ['-c', '-x'] as arguments
+MY_ENV_VAR = 'value'
