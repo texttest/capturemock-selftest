@@ -7,6 +7,9 @@ record
 # record the same information
 record2tests
 
+# Only use capturemock for one of the tests
+second_test_no_mock
+
 # If we can't import something, don't throw an exception in startup
 import_fails
 
