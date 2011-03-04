@@ -1,8 +1,4 @@
 In syscalls.py now
 firstcall called with 5 arguments
-The time is now Sat Jan 15 20:35:07 2011
+The time is now Fri Mar  4 08:13:17 2011
 firstcall exited with status 1
-firstcall called with 5 arguments
-The time is now Sat Jan 15 20:35:07 2011
-The current working directory is tmpdir
-The process ID is 6911
