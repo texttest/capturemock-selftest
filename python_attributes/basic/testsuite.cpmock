@@ -18,5 +18,9 @@ dont_record_additional
 # If we don't replay anything, don't fail
 no_action
 
+# If there is no file and no interception, don't crash...
+# 
+no_action_no_file
+
 # Don't delete mock files if we're only set up to record command line stuff
 command_line_record
