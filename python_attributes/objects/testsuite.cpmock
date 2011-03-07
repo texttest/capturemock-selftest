@@ -7,6 +7,9 @@ record
 # Don't store object instances across tests
 record2tests
 
+# Capture the tests in the same file by setting default values
+record2tests_set_defaults
+
 # Check we can add filtering to whatever is produced in the file, and hence change the result...
 alter_response
 
