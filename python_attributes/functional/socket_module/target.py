@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-from capturemock import capturemock
-from capturemock.config import RECORD_ONLY_MODE
+from capturemock import capturemock, RECORD
 
-@capturemock("socket", mode=RECORD_ONLY_MODE)
+@capturemock("socket", mode=RECORD)
 def test():
     import socket
     
