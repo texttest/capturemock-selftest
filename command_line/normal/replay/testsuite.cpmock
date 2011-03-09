@@ -1,11 +1,13 @@
 # Make sure we can replay some matching traffic and it can work...
 matching
 
+# Make sure we aren't reliant on having record enabled also
+no_record
+
 # If we're replaying, don't record additional stuff even if it matches our intercepts
 partial_mock
 
 # Don't write trailing spaces if no args given to program
-# 
 no_args
 
 # Check for repeated traffic where we don't get a response second time around
@@ -21,7 +23,6 @@ non_matching_sequences
 argument_order
 
 # Don't be fooled if the arguments repeat
-# 
 argument_repeat
 
 # Replay a mock file with some funny things in it
