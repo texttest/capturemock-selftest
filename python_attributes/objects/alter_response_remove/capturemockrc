@@ -1,0 +1,7 @@
+[python]
+intercepts = moduletomock
+alterations = noattr
+
+[noattr]
+match_pattern = has no attribute
+replacement = 

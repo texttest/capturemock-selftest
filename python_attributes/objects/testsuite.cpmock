@@ -13,6 +13,9 @@ record2tests_set_defaults
 # Check we can add filtering to whatever is produced in the file, and hence change the result...
 alter_response
 
+# Check we can add filtering to whatever is produced in the file, and hence change the result. Check it works to remove things
+alter_response_remove
+
 # If we return e.g. datetime.datetime we shouldn't be intercepting it
 object_not_intercepted
 
