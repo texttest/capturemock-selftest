@@ -16,3 +16,6 @@ intercept_parent_prev_import
 
 # Check we can intercept just a submodule
 intercept_submodule
+
+# Pass a class defined in a submodule as an argument
+class_argument
