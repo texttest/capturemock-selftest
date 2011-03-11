@@ -1,0 +1,6 @@
+<-PYT:import moduletomock2
+<-PYT:import moduletomock
+<-PYT:moduletomock.attribute
+->RET:'REAL_ATTR'
+<-PYT:moduletomock.call_function()
+->RET:'REAL_RETURN'

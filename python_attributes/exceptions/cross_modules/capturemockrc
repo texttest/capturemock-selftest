@@ -1,3 +1,5 @@
 [python]
 intercepts = moduletomock,moduletomock2
 
+[general]
+log_config_file = logging

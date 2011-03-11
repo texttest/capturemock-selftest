@@ -20,11 +20,23 @@ format=%(asctime)s - %(message)s
 format=%(name)s %(levelname)s - %(message)s
 
 # ====== The following are disabled by default ======
+# ======= Section for Call Stack Checker ======
+[logger_Call Stack Checker]
+handlers=Call Stack Checker
+qualname=Call Stack Checker
+#level=DEBUG
+
+[handler_Call Stack Checker]
+class=FileHandler
+formatter=debug
+args=(os.devnull, 'a')
+#args=('callstackchecker.cpmock', 'a')
+
 # ======= Section for Replay ======
 [logger_Replay]
 handlers=Replay
 qualname=Replay
-#level=INFO
+#level=DEBUG
 
 [handler_Replay]
 class=FileHandler
@@ -36,7 +48,7 @@ args=(os.devnull, 'a')
 [logger_Server]
 handlers=Server
 qualname=Server
-#level=INFO
+#level=DEBUG
 
 [handler_Server]
 class=FileHandler
@@ -46,10 +58,10 @@ args=(os.devnull, 'a')
 
 # ====== Cruft that python logging module needs ======
 [loggers]
-keys=root,Replay,Server
+keys=root,Call Stack Checker,Replay,Server
 
 [handlers]
-keys=root,Replay,Server,stdout
+keys=root,Call Stack Checker,Replay,Server,stdout
 
 [formatters]
 keys=timed,debug

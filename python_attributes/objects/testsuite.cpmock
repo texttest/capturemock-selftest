@@ -4,6 +4,9 @@ replay
 # record the same information
 record
 
+# record with a direct reference, make sure it works
+record_no_rcfile
+
 # Don't store object instances across tests
 record2tests
 

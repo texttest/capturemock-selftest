@@ -16,6 +16,9 @@ socket_module
 # Intercepting 'socket' is a special case, because capturemock uses it internally. Shouldn't record it if it isn't used...
 socket_module_unused
 
+# Don't record internal stuff in a module if it's called from the other module
+cross_modules
+
 # Record traffic only when callers are OK
 exclude_callers
 
