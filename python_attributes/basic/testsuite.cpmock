@@ -3,6 +3,9 @@ replay
 # Check we can pass the python attribute directly without an rc file
 replay_without_rcfile
 
+# Read .capturemockrc from current working directory if nothing else visible
+replay_default_rcfile
+
 # Check we can pass the python attribute directly without an rc file
 previous_module_import
 
@@ -19,7 +22,6 @@ dont_record_additional
 no_action
 
 # If there is no file and no interception, don't crash...
-# 
 no_action_no_file
 
 # Don't delete mock files if we're only set up to record command line stuff
