@@ -30,3 +30,6 @@ subprocess_no_action
 
 # If the subprocess does relevant stuff, it should append to the same file
 subprocess_append
+
+# Check we can configure to ignore repeated function calls
+ignore_repeats
