@@ -26,3 +26,6 @@ no_action_no_file
 
 # Don't delete mock files if we're only set up to record command line stuff
 command_line_record
+
+# Check we don't mangle the function name
+function_name
