@@ -1,0 +1,2 @@
+<-PYT:moduletomock.method()
+->RET:'Real method answer'

@@ -1,0 +1,7 @@
+[python]
+intercepts = moduletomock.method
+
+[moduletomock.method]
+check_repeated_calls = False
+
+
