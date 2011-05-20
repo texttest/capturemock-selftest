@@ -1,0 +1,4 @@
+<-CAL:moduletomock.attribute
+->RET:FAKE_ATTR
+<-CAL:moduletomock.call_function('hello')
+->RET:FAKE_RETURN

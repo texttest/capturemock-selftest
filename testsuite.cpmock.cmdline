@@ -3,3 +3,6 @@ command_line
 
 # Tests for intercepting synchronous traffic over a network
 client_server
+
+# Check we can run the CaptureMock server with a custom client and manage to use things properly
+custom_client
