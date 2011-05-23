@@ -5,7 +5,6 @@ link_test_path:moduletomock2.py
 link_test_path:indirectmodule.py
 link_test_path:packagetomock
 
-test_data_ignore:*.pyc
 test_data_ignore:packagetomock
 
 [run_dependent_text]

@@ -25,6 +25,8 @@ link_test_path:moduletomock.py
 link_test_path:capturemockrc
 copy_test_path:capturemock
 
+test_data_ignore:*.pyc
+
 create_catalogues:true
 
 # Expanded name to use for application
