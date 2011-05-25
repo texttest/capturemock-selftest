@@ -1,0 +1,9 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.MyFactory()
+->RET:Instance('MyFactory', 'myfactory1')
+<-PYT:myfactory1.object
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.getAnswer()
+->RET:'Answer'
+<-PYT:myobject1.getAnswer()
+->RET:'Answer'
