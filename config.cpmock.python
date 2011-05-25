@@ -5,8 +5,6 @@ link_test_path:moduletomock2.py
 link_test_path:indirectmodule.py
 link_test_path:packagetomock
 
-test_data_ignore:packagetomock
-
 [run_dependent_text]
 stdout:0x[0-9a-fA-F]*{REPLACE <pointer>}
 recorded_mock*:0x[0-9a-fA-F]*{REPLACE <pointer>}
