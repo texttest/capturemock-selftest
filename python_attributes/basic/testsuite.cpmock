@@ -12,6 +12,9 @@ previous_module_import
 # See what happens when replay doesn't match: match the arguments up and then raise an exception
 replay_fails
 
+# See what happens when replay doesn't match and we've requested exact matching, bail out as soon as we can't match something
+replay_fails_exact_matching
+
 # record the same information
 record
 

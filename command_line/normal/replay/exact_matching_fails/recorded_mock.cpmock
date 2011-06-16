@@ -1,0 +1,8 @@
+<-CMD:firstcall -a -b -c "hello | goodbye"
+->OUT:firstcall called with 5 arguments
+The time is now Tue Jun 10 11:54:09 2008
+->EXC:1
+<-CMD:firstcall -a -b -c "hello | goodbye"
+->OUT:firstcall called with 5 arguments
+The time is now Tue Jun 10 11:54:09 2008
+->EXC:1

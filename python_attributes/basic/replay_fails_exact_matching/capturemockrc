@@ -1,0 +1,5 @@
+[python]
+intercepts = moduletomock
+
+[general]
+use_exact_matching = True

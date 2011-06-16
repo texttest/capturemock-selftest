@@ -1,6 +1,9 @@
 # Make sure we can replay some matching traffic and it can work...
 matching
 
+# Handle failed matches gracefully...
+exact_matching_fails
+
 # Make sure we aren't reliant on having record enabled also
 no_record
 

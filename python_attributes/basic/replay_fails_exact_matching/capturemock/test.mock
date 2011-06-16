@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.attribute
+->RET:'FAKE_ATTR'
+<-PYT:moduletomock.call_function("args")
+->RET:'FAKE_RETURN'

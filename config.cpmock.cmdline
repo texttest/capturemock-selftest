@@ -1,3 +1,4 @@
 
 [run_dependent_text]
 recorded_mock:{INTERNAL writedir}{REPLACE <sandbox>}
+stderr:{INTERNAL writedir}{REPLACE <sandbox>}
