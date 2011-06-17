@@ -4,3 +4,4 @@ interpreter:python
 [run_dependent_text]
 recorded_mock:\\{REPLACE /}
 recorded_mock:([/a-z]*);{REPLACE \1:}
+stderr:([/a-z]*);{REPLACE \1:}
