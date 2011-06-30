@@ -6,6 +6,9 @@ replay_without_rcfile
 # Read .capturemockrc from current working directory if nothing else visible
 replay_default_rcfile
 
+# Providing a bad RC file should write a warning and proceed
+replay_bad_rcfile
+
 # Check we can pass the python attribute directly without an rc file
 previous_module_import
 
