@@ -1,0 +1,6 @@
+[general]
+alterations = actual
+
+[actual]
+match_pattern = REAL
+replacement = ACTUAL

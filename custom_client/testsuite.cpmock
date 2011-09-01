@@ -1,3 +1,6 @@
 # Record with the custom client
 record
+
+# Check we can apply alterations to what we record
+record_alter
 replay
