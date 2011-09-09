@@ -1,4 +1,4 @@
-<-CAL:moduletomock.attribute
+<-CAL:the_module_to_mock.attribute
 ->RET:ACTUAL_ATTR
-<-CAL:moduletomock.call_function('hello')
+<-CAL:the_module_to_mock.call_function('hello')
 ->RET:ACTUAL_RETURN
