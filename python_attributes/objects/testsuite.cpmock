@@ -39,3 +39,7 @@ unusable_object_args
 
 # Check we can handle standard collections containing objects
 collections
+
+# Tests for inheritance across the interception boundary
+# 
+intercept_base_class
