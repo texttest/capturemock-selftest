@@ -12,3 +12,6 @@ class MyNewObject(Base, object):
 class MyObject(Base):
     def getOverrideValue(self):
         return "Old Style!"
+
+    def doNothing(self):
+        pass

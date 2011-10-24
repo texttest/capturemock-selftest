@@ -1,6 +1,7 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.MyObject('My Value')
 ->RET:Instance('MyObject(Base)', 'myobject1')
+<-PYT:myobject1.doNothing()
 <-PYT:myobject1.getValue()
 ->RET:'My Value'
 <-PYT:moduletomock.MyNewObject('My Value')

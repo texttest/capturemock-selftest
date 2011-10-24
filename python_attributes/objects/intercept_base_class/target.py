@@ -14,6 +14,7 @@ def test():
             return "Overridden!"
 
     theObject = MyDerived("My Value")
+    theObject.doNothing()
     print theObject.getValue()
     print theObject.getOverrideValue()
     print isinstance(theObject, moduletomock.Base)
