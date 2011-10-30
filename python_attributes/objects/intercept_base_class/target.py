@@ -7,7 +7,7 @@ def test():
     import moduletomock
     class MyDerived(moduletomock.MyObject):
         def getOverrideValue(self):
-            return "Overridden!"
+            return "Overridden " + moduletomock.MyObject.getOverrideValue(self)
 
     class MyNewDerived(moduletomock.MyNewObject):
         def getOverrideValue(self):

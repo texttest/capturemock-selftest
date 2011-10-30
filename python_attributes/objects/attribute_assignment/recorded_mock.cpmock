@@ -3,5 +3,5 @@
 ->RET:Instance('MyObject', 'myobject1')
 <-PYT:myobject1.value = 'My Value'
 <-PYT:myobject1.itself = myobject1
-<-PYT:myobject1.getValue()
+<-PYT:myobject1.itself.getValue()
 ->RET:'My Value'

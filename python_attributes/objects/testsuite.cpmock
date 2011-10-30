@@ -37,9 +37,11 @@ attribute_assignment
 # What happens if objects that can't be reconstructed are passed as arguments
 unusable_object_args
 
+# static attributes, method calls etc
+static_calls
+
 # Check we can handle standard collections containing objects
 collections
 
 # Tests for inheritance across the interception boundary
-# 
 intercept_base_class

@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.TheClass.attribute
+->RET:'The Attribute'
+<-PYT:moduletomock.TheClass.getNumber()
+->RET:42

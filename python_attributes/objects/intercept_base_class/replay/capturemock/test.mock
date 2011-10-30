@@ -4,6 +4,8 @@
 <-PYT:myobject1.doNothing()
 <-PYT:myobject1.getValue()
 ->RET:'Faked My Value'
+<-PYT:moduletomock.MyObject.getOverrideValue(myobject1)
+->RET:'Old Style!'
 <-PYT:moduletomock.MyNewObject('My Value')
 ->RET:Instance('MyNewObject(Base, object)', 'mynewobject1')
 <-PYT:mynewobject1.getValue()
