@@ -35,3 +35,6 @@ command_line_record
 
 # Check we don't mangle the function name
 function_name
+
+# Check we forward the return value
+function_return_value
