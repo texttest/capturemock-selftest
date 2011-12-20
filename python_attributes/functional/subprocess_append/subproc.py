@@ -5,4 +5,4 @@ from capturemock import process_startup
 process_startup()
 import moduletomock
     
-print moduletomock.call_function()
+print(moduletomock.call_function())

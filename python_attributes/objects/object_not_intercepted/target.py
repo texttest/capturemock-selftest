@@ -6,10 +6,10 @@ from capturemock import capturemock
 def test():
     import moduletomock
     gap = moduletomock.get_date1() - moduletomock.get_date2()
-    print gap.days, "days"
+    print(str(gap.days) + " days")
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

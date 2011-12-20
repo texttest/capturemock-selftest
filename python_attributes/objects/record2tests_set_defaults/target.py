@@ -10,14 +10,14 @@ class TestClass:
         import moduletomock
 
         obj = moduletomock.getObject("name")
-        print obj.getNumber() + 1
+        print(obj.getNumber() + 1)
     
     @capturemock
     def test2(self):
         import moduletomock
         
         obj = moduletomock.getObject("name2")
-        print obj.getNumber() + 2
+        print(obj.getNumber() + 2)
     
 
 try:
@@ -25,5 +25,5 @@ try:
     x.test()
     x.test2()
 except CaptureMockReplayError:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
 

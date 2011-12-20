@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.call_function({'windows_path': 'C:\\no_such_directory', 'quotestring': """This one
+has a ' in it""", 'string': '''This
+is a large unicode string'''})
+->RET:'REAL_RETURN'

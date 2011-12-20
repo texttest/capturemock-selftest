@@ -4,4 +4,4 @@
 <-PYT:moduletomock.getValue(3)
 ->RET:'Fake'
 <-PYT:import moduletomock2
-->RET:raise exceptions.ImportError('No imports allowed from here')
+->RET:raise ImportError('No imports allowed from here')

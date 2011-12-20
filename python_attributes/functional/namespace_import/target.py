@@ -4,12 +4,11 @@ from capturemock import capturemock, CaptureMockReplayError
 
 @capturemock(rcFiles=["capturemockrc"])
 def test():
-    from moduletomock import *
-    
-    print call_function() + " " + attribute
+    import mysystem
+    mysystem.dostuff()
 
 try:
     test()
 except CaptureMockReplayError:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

@@ -15,17 +15,17 @@ def test():
 
     theObject = MyDerived("My Value")
     theObject.doNothing()
-    print theObject.getValue()
-    print theObject.getOverrideValue()
-    print isinstance(theObject, moduletomock.Base)
+    print(theObject.getValue())
+    print(theObject.getOverrideValue())
+    print(isinstance(theObject, moduletomock.Base))
 
     theObject = MyNewDerived("My Value")
-    print theObject.getValue()
-    print theObject.getOverrideValue()
-    print isinstance(theObject, moduletomock.Base)
+    print(theObject.getValue())
+    print(theObject.getOverrideValue())
+    print(isinstance(theObject, moduletomock.Base))
 
 try:
     test()
 except CaptureMockReplayError:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

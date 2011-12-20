@@ -1,3 +1,3 @@
 [python]
-intercepts = no_such_module,moduletomock,urllib2
+intercepts = no_such_module,moduletomock,fakeurllib
 

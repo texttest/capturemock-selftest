@@ -9,7 +9,7 @@ def test():
     return moduletomock.call_function() + " " + moduletomock.attribute
 
 try:
-    print test()
+    print(test())
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

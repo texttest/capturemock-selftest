@@ -14,7 +14,7 @@ class Dog:
         return self in animals
 
     def milk(self):
-        raise BadAnimal, "Don't milk the dog!"
+        raise BadAnimal("Don't milk the dog!")
 
 class Cow(object):
     def speak(self):

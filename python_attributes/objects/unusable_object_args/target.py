@@ -12,10 +12,10 @@ def test():
     d1 = Difficult()
     d2 = Difficult()
 
-    print moduletomock.callFunction(d1, param=d2)
+    print(moduletomock.callFunction(d1, param=d2))
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
 

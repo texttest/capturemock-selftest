@@ -6,10 +6,10 @@ from capturemock import capturemock
 def test():
     import moduletomock
     o = moduletomock.object
-    print o.getValue()
-    print moduletomock.callFunction(o, param=o)
+    print(o.getValue())
+    print(moduletomock.callFunction(o, param=o))
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")

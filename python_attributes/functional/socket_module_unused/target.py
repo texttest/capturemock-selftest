@@ -4,11 +4,11 @@ from capturemock import capturemock
 
 @capturemock(rcFiles=["capturemockrc"], mode=1)
 def test():
-    print "Hello world!"
+    print("Hello world!")
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value))
+    import sys; sys.stderr.write(str(sys.exc_info()[1]))
     
 

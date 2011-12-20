@@ -6,11 +6,11 @@ from capturemock import capturemock
 def test():
     import moduletomock
     
-    print moduletomock.callFunction("hello", 1, None, third=0.3, second=2, first=None) 
+    print(moduletomock.callFunction("hello", 1, None, third=0.3, second=2, first=None)) 
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value))
+    import sys; sys.stderr.write(str(sys.exc_info()[1]))
     
 

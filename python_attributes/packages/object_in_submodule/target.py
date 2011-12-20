@@ -6,11 +6,11 @@ from capturemock import capturemock
 def test():
     import packagetomock
     
-    print packagetomock.getObject().getValue()
+    print(packagetomock.getObject().getValue())
 
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

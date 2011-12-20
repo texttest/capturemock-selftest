@@ -6,10 +6,10 @@ from capturemock import capturemock
 def test():
     import moduletomock
     floatVal = 10.0 / 3
-    print moduletomock.call_function(floatVal)
+    print(moduletomock.call_function(floatVal))
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

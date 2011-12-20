@@ -8,10 +8,10 @@ def test():
     theObject = moduletomock.MyObject()
     theObject.value = "My Value"
     theObject.itself = theObject
-    print theObject.itself.getValue()
+    print(theObject.itself.getValue())
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

@@ -7,11 +7,11 @@ def test():
     import moduletomock2
     import moduletomock
 
-    print moduletomock.attribute, moduletomock.call_function()
+    print(moduletomock.attribute + " " + moduletomock.call_function())
     
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     
 

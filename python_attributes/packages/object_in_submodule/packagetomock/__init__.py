@@ -1,5 +1,5 @@
 
-import mymodule
+from . import mymodule
 
 def getObject():
     return mymodule.getObject()

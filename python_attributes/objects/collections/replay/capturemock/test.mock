@@ -22,6 +22,6 @@
 <-PYT:cow3.milk()
 ->RET:'Milking'
 <-PYT:dog4.milk()
-->RET:raise Instance('BadAnimal(exceptions.Exception)', 'badanimal1')
+->RET:raise Instance('BadAnimal(Exception)', 'badanimal1')
 <-PYT:badanimal1.__str__()
 ->RET:"Don't milk the dog, silly!"

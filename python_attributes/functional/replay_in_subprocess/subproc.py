@@ -7,4 +7,4 @@ process_startup()
 import moduletomock
 import smtplib # for testing additional filtering
 
-print moduletomock.call_function() + " " + moduletomock.attribute
+print(moduletomock.call_function() + " " + moduletomock.attribute)

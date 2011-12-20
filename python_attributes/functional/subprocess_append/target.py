@@ -7,7 +7,7 @@ def test():
     import os, subprocess, sys
     import moduletomock
     
-    print moduletomock.call_function() + " " + moduletomock.attribute
+    print(moduletomock.call_function() + " " + moduletomock.attribute)
     sys.stdout.flush()
 
     subprocess.call([ "python", "subproc.py" ])
@@ -15,6 +15,6 @@ def test():
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     
 

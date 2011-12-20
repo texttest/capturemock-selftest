@@ -1,2 +1,0 @@
-target.py:5: SyntaxWarning: import * only allowed at module level
-  @capturemock(rcFiles=["capturemockrc"])

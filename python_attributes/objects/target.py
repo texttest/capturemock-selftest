@@ -10,16 +10,16 @@ def test():
 String""")
     if isinstance(obj, moduletomock.TheClass):
         if isinstance(obj, moduletomock.TheBaseClass):
-            print obj.getNumber() + 1
-            print "Nonsense attributes = " + repr(hasattr(obj, "nonsense"))
+            print(obj.getNumber() + 1)
+            print("Nonsense attributes = " + repr(hasattr(obj, "nonsense")))
         else:
-            print "Not the Base!"
+            print("Not the Base!")
     else:
-        print "Not the Class!"
+        print("Not the Class!")
 
 
 try:
     test()
 except CaptureMockReplayError:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
 

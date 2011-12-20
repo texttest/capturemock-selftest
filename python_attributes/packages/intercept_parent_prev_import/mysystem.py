@@ -3,5 +3,5 @@
 import packagetomock.moduletomock as mtm
 
 def dostuff():
-    print mtm.call_function() + " " + mtm.attribute
+    print(mtm.call_function() + " " + mtm.attribute)
 

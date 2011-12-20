@@ -7,12 +7,12 @@ def test():
     import moduletomock
     try:
         moduletomock.callFunction()
-    except Exception, e:
-        print "Caught exception", e
+    except Exception as e:
+        print("Caught exception " + str(e))
     
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     
 

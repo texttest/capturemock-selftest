@@ -1,0 +1,9 @@
+interpreter:python3
+
+[run_dependent_text]
+# two sources of AttributeError
+recorded_mock*:exceptions.{REPLACE }
+recorded_mock*:([A-Za-z]*) instance (has no attribute){REPLACE '\1' object \2}
+recorded_mock*:\(object\){REPLACE }
+recorded_mock*:, object\){REPLACE )}
+recorded_mock*:\.next\(\){REPLACE .__next__()}

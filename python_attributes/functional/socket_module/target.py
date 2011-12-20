@@ -6,11 +6,11 @@ from capturemock import capturemock, RECORD
 def test():
     import socket
     
-    print socket.gethostname()
+    print(socket.gethostname())
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value))
+    import sys; sys.stderr.write(str(sys.exc_info()[1]))
     
 

@@ -7,10 +7,10 @@ def test():
     import moduletomock
     import smtplib # for testing additional filtering
 
-    print moduletomock.call_function() + " " + moduletomock.attribute
+    print(moduletomock.call_function() + " " + moduletomock.attribute)
 
 try:
     test()
 except:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

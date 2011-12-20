@@ -12,6 +12,6 @@ def test():
 try:
     test()
 except CaptureMockReplayError:
-    import sys; sys.stderr.write(str(sys.exc_value) + "\n")
+    import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     
 

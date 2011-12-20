@@ -1,2 +1,2 @@
 
-print "Imported bad module indirectly!"
+print("Imported bad module indirectly!")

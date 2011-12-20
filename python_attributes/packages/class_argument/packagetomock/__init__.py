@@ -1,5 +1,5 @@
 
-import sub
+from . import sub
 
 class MyObject(object):
     def construct(self, cls):

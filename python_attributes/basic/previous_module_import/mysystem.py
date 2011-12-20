@@ -3,5 +3,5 @@
 import moduletomock
 
 def dostuff():
-    print moduletomock.call_function() + " " + moduletomock.attribute
+    print(moduletomock.call_function() + " " + moduletomock.attribute)
 
