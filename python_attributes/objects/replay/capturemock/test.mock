@@ -5,4 +5,4 @@ String''')
 <-PYT:theclass1.getNumber()
 ->RET:3
 <-PYT:theclass1.nonsense
-->RET:raise exceptions.AttributeError("TheClass instance has no attribute 'nonsense'")
+->RET:raise AttributeError("TheClass instance has no attribute 'nonsense'")
