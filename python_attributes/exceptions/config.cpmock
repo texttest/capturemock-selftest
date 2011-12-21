@@ -1,4 +1,4 @@
-link_test_path:fakeurllib
+link_test_path:fakeurllib.py
 
 [run_dependent_text]
 stdout:fakeurllib\.(URLError: <urlopen){REPLACE \1}
