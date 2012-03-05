@@ -1,6 +1,6 @@
 <-CLI:pow(2, 3)
 ->SRV:8
-<-CLI:add(2, 3)
+<-CLI:add(8, 3)
 ->SRV:5
 <-CLI:no_such_method('str')
 ->SRV:raise xmlrpclib.Fault(1, '<type \'exceptions.Exception\'>:method "no_such_method" is not supported')

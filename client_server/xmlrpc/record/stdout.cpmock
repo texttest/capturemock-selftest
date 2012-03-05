@@ -1,5 +1,5 @@
 8
-5
+11
 Caught exception for missing method...
 <Fault 1: '<type \'exceptions.Exception\'>:method "no_such_method" is not supported'>
 ['add', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
