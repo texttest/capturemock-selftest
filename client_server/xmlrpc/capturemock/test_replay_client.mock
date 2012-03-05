@@ -1,0 +1,8 @@
+<-CLI:pow(2, 3)
+->SRV:8
+<-CLI:add(2, 3)
+->SRV:5
+<-CLI:no_such_method('str')
+->SRV:raise xmlrpclib.Fault(1, '<type \'exceptions.Exception\'>:method "no_such_method" is not supported')
+<-CLI:system.listMethods()
+->SRV:['add', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']

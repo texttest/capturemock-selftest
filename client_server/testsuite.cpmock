@@ -1,7 +1,5 @@
-record
+# Tests for the "classic" set up, where each request is a single socket connection
+classic
 
-# Make sure we can replay the clientserver traffic appropriately
-replay_server
-
-# Lack of server contact at the start should mean CaptureMock taking on the role of server itself
-replay_client
+# Tests for xmlrpc servers
+xmlrpc

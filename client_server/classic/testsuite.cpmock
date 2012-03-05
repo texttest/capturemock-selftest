@@ -1,0 +1,7 @@
+record
+
+# Make sure we can replay the clientserver traffic appropriately
+replay_server
+
+# Lack of server contact at the start should mean CaptureMock taking on the role of server itself
+replay_client
