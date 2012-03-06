@@ -10,8 +10,11 @@ def sendServerState(address):
         proxy = xmlrpclib.ServerProxy(servAddr)
         proxy.setServerLocation(address)
 
-serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE)
+serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE, shell=True)
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
 sendServerState(serverAddress)
-os.kill(serverProc.pid, signal.SIGTERM)
+try:
+    serverProc.terminate() # needs python2.6
+except:
+    os.kill(serverProc.pid, signal.SIGTERM) # needs posix
 serverProc.wait()

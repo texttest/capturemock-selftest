@@ -16,9 +16,13 @@ def runClientThread():
 
 clientThread = Thread(target=runClientThread)
 clientThread.start()
-serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE)
+serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE, shell=True)
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
 sendServerState(serverAddress)
 clientThread.join()
-os.kill(serverProc.pid, signal.SIGTERM)
+try:
+    serverProc.terminate()
+except:
+    os.kill(serverProc.pid, signal.SIGTERM)
+
 serverProc.wait()
