@@ -37,6 +37,8 @@ host, port = server.socket.getsockname()
 address = host + ":" + str(port)
 message = "Started string-length server at " + address
 sendServerState(message)
+# Not all server states set the server location. Make sure we remember this...
+sendServerState("Nice day today!")
 print message
 sys.stdout.flush()
 
