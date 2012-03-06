@@ -10,7 +10,7 @@ def sendServerState(address):
         proxy = xmlrpclib.ServerProxy(servAddr)
         proxy.setServerLocation(address)
 
-serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE, shell=True)
+serverProc = subprocess.Popen([ "server.py" ], stdout=subprocess.PIPE, stderr=open(os.devnull, "w"), shell=True, cwd=os.path.expanduser("~"))
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
 sendServerState(serverAddress)
 try:
