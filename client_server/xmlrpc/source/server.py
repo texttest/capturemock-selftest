@@ -20,6 +20,7 @@ server.register_function(pow)
 def adder_function(x,y):
     return x + y
 server.register_function(adder_function, 'add')
+server.register_function(len)
 
 host, port = server.socket.getsockname()
 address = "http://" + host + ":" + str(port)

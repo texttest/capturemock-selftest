@@ -4,8 +4,10 @@ import xmlrpclib, sys
 
 servAddr = sys.argv[1]
 s = xmlrpclib.ServerProxy(servAddr)
-print s.pow(2,3)  # Returns 2**3 = 8
-print s.add(8,3)  # Returns 11
+val = s.pow(2,3)  # Returns 2**3 = 8
+print val  
+print s.add(val,3)  # Returns 11
+print s.len("") # test empty strings...
 try:
     print s.no_such_method("str")
 except xmlrpclib.Fault, e:

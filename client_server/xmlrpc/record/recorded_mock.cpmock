@@ -3,7 +3,9 @@
 <-SRV:$answer
 ->CLI:add($answer, 3)
 <-SRV:11
+->CLI:len('')
+<-SRV:0
 ->CLI:no_such_method('str')
 <-SRV:raise xmlrpclib.Fault(1, '<type \'exceptions.Exception\'>:method "no_such_method" is not supported')
 ->CLI:system.listMethods()
-<-SRV:['add', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
+<-SRV:['add', 'len', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
