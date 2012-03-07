@@ -26,6 +26,12 @@ def add_newlines(s):
 
 server.register_function(add_newlines)
 
+def a_stupidly_long_function_name_to_test_pprinting_in_mock_files():
+    pass
+
+server.register_function(a_stupidly_long_function_name_to_test_pprinting_in_mock_files)
+
+
 host, port = server.socket.getsockname()
 address = "http://" + host + ":" + str(port)
 message = "Started mathematical server at " + address

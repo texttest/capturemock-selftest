@@ -6,4 +6,4 @@ Extra Line
 New Extra Line
 Caught exception for missing method...
 <Fault 1: '<type \'exceptions.Exception\'>:method "no_such_method" is not supported'>
-['add', 'add_newlines', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
+['a_stupidly_long_function_name_to_test_pprinting_in_mock_files', 'add', 'add_newlines', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
