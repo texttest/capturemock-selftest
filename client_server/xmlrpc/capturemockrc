@@ -4,5 +4,5 @@ log_config_file = logging
 alterations = alter_system
 
 [alter_system]
-match_pattern = 8
+match_pattern = [89]
 replacement = $answer

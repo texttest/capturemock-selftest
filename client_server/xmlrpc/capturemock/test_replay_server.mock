@@ -1,7 +1,9 @@
 <-SRV:setServerLocation(<address>)
 ->CLI:pow(2, 3)
 <-SRV:$answer
-->CLI:add($answer, 3)
+->CLI:pow(3, 2)
+<-SRV:$answer_2
+->CLI:add($answer, $answer_2)
 <-SRV:nonsense
 ->CLI:add_newlines('')
 <-SRV:'''First Line
