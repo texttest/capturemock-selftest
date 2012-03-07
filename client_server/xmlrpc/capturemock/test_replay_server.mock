@@ -2,7 +2,7 @@
 ->CLI:pow(2, 3)
 <-SRV:$answer
 ->CLI:add($answer, 3)
-<-SRV:11
+<-SRV:nonsense_response
 ->CLI:len('')
 <-SRV:0
 ->CLI:no_such_method('str')
