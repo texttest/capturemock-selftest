@@ -12,4 +12,11 @@ New Extra Line'''
 ->CLI:no_such_method('str')
 <-SRV:raise xmlrpclib.Fault(1, '<type \'exceptions.Exception\'>:method "no_such_method" is not supported')
 ->CLI:system.listMethods()
-<-SRV:['add', 'add_newlines', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']
+<-SRV:['a_stupidly_long_function_name_to_test_pprinting_in_mock_files',
+ 'add',
+ 'add_newlines',
+ 'pow',
+ 'system.listMethods',
+ 'system.methodHelp',
+ 'system.methodSignature']
+
