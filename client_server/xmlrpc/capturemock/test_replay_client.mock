@@ -2,8 +2,10 @@
 ->SRV:8
 <-CLI:add(8, 3)
 ->SRV:5
-<-CLI:len('')
-->SRV:0
+<-CLI:add_newlines('')
+->SRV:'''First Line
+Extra Line
+New Extra Line'''
 <-CLI:no_such_method('str')
 ->SRV:raise xmlrpclib.Fault(1, '<type \'exceptions.Exception\'>:method "no_such_method" is not supported')
 <-CLI:system.listMethods()

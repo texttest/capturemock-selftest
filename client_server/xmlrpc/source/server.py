@@ -20,7 +20,11 @@ server.register_function(pow)
 def adder_function(x,y):
     return x + y
 server.register_function(adder_function, 'add')
-server.register_function(len)
+
+def add_newlines(s):
+    return s + "First Line\nExtra Line\nNew Extra Line"
+
+server.register_function(add_newlines)
 
 host, port = server.socket.getsockname()
 address = "http://" + host + ":" + str(port)
