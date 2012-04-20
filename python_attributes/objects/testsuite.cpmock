@@ -16,6 +16,9 @@ record2tests_set_defaults
 # Check we can add filtering to whatever is produced in the file, and hence change the result...
 alter_response
 
+# Check the filtering can handle regexps and replacements
+alter_response_regexp
+
 # Check we can add filtering to whatever is produced in the file, and hence change the result. Check it works to remove things
 alter_response_remove
 
