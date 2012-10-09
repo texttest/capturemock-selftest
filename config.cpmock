@@ -29,6 +29,9 @@ test_data_ignore:*.pyc
 
 create_catalogues:true
 
+# For Windows testing, don't hang forever
+kill_timeout:300
+
 # Expanded name to use for application
 full_name:CaptureMock
 
