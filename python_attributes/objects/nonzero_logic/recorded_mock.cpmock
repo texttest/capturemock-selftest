@@ -1,0 +1,17 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.Zero()
+->RET:Instance('Zero(object)', 'zero1')
+<-PYT:zero1.__nonzero__()
+->RET:False
+<-PYT:moduletomock.LenZero()
+->RET:Instance('LenZero(object)', 'lenzero1')
+<-PYT:lenzero1.__nonzero__
+->RET:raise exceptions.AttributeError("'LenZero' object has no attribute '__nonzero__'")
+<-PYT:lenzero1.__len__()
+->RET:0
+<-PYT:moduletomock.Normal()
+->RET:Instance('Normal(object)', 'normal1')
+<-PYT:normal1.__nonzero__
+->RET:raise exceptions.AttributeError("'Normal' object has no attribute '__nonzero__'")
+<-PYT:normal1.__len__
+->RET:raise exceptions.AttributeError("'Normal' object has no attribute '__len__'")

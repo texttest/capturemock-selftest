@@ -41,6 +41,9 @@ attribute_assignment
 unusable_object_args
 iteration
 
+# Check how we handle 'if x' on intercepted objects
+nonzero_logic
+
 # static attributes, method calls etc
 static_calls
 
