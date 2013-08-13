@@ -8,15 +8,15 @@ def test():
     
     x = moduletomock.Zero()
     if not x:
-        print "Zero was zero!"
+        print("Zero was zero!")
 
     x = moduletomock.LenZero()
     if not x:
-        print "LenZero was zero!"
+        print("LenZero was zero!")
 
     x = moduletomock.Normal()
     if x:
-        print "Normal was normal!"
+        print("Normal was normal!")
 
 try:
     test()
