@@ -6,3 +6,6 @@
 <-PYT:myobject1.setValue('My Value')
 <-PYT:myobject1.value
 ->RET:'My Value'
+<-PYT:myobject1.setValue('Final Value')
+<-PYT:myobject1.value
+->RET:'Final Value'

@@ -1,0 +1,11 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.MyObject()
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.value
+->RET:'Initial Value'
+<-PYT:myobject1.setValue('My Value')
+<-PYT:myobject1.value
+->RET:'My Value'
+<-PYT:myobject1.setValue('Final Value')
+<-PYT:myobject1.value
+->RET:'Final Value'

@@ -37,9 +37,6 @@ composite_attribute
 # Check we can assign attributes to stored objects
 attribute_assignment
 
-# If we assign stuff in an intercepted function, need to do something with this
-side_effects
-
 # What happens if objects that can't be reconstructed are passed as arguments
 unusable_object_args
 iteration
@@ -49,6 +46,9 @@ nonzero_logic
 
 # static attributes, method calls etc
 static_calls
+
+# If we assign stuff in an intercepted function, need to do something with this
+side_effects
 
 # Check we can handle standard collections containing objects
 collections
