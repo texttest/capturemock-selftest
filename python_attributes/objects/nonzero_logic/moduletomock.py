@@ -1,6 +1,11 @@
 
 class Zero(object):
+    # Python 2.x
     def __nonzero__(self):
+        return False
+
+    # Python 3.x
+    def __bool__(self):
         return False
 
 class LenZero(object):
