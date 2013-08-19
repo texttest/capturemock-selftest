@@ -14,6 +14,8 @@ def test():
     print(theObject.value)
     theObject.setValue("Final Value")
     print(theObject.value)
+    print(theObject.value)
+    print(theObject.value)
 
 try:
     test()
