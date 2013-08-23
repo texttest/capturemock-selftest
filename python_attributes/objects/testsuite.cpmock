@@ -31,6 +31,9 @@ object_as_attribute
 # Check it works if getting the attribute creates new objects...
 attribute_new_objects
 
+# Don't get into MRO problems if we intercept a base object and then a derived object
+base_class_first
+
 # Check we can read attributes of attributes
 composite_attribute
 
