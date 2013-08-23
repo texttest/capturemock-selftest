@@ -38,3 +38,4 @@ full_name:CaptureMock
 [collate_file]
 recorded_mock*:capturemock/test*.mock
 replay_fail:capturemock/*.mock.tmp
+replay_partial:tmp*
