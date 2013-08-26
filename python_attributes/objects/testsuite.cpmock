@@ -40,6 +40,9 @@ composite_attribute
 # Check we can assign attributes to stored objects
 attribute_assignment
 
+# Need to do funny stuff with __new__ to prevent accidents in this case...
+int_subclass
+
 # What happens if objects that can't be reconstructed are passed as arguments
 unusable_object_args
 iteration

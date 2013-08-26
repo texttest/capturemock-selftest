@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.object
+->RET:Instance('MyIntObject(int)', 'myintobject1')
+<-PYT:myintobject1.getDescription()
+->RET:'The answer is 42'

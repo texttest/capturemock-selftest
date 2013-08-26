@@ -1,0 +1,4 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.setCallback(str)
+<-PYT:moduletomock.doStuffWithCallback(42)
+->RET:'42'
