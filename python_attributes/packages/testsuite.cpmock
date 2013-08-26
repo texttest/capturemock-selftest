@@ -17,5 +17,9 @@ intercept_parent_prev_import
 # Check we can intercept just a submodule
 intercept_submodule
 
+# If we import a submodule indirectly from an import of something else we are intercepting,
+# need to include it properly
+submodule_import_in_other
+
 # Pass a class defined in a submodule as an argument
 class_argument

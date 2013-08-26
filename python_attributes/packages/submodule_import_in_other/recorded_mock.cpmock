@@ -1,0 +1,6 @@
+<-PYT:import packagetomock
+<-PYT:import moduletomock
+<-PYT:packagetomock.mymodule.MyObject()
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.getValue()
+->RET:'Hello'

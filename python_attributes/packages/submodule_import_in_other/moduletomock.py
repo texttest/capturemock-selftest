@@ -1,0 +1,2 @@
+
+import packagetomock.mymodule
