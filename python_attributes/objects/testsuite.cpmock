@@ -43,6 +43,9 @@ attribute_assignment
 # Need to do funny stuff with __new__ to prevent accidents in this case...
 int_subclass
 
+# Don't list the class multiple times if we return a previously known object
+shorten_reference
+
 # What happens if objects that can't be reconstructed are passed as arguments
 unusable_object_args
 iteration

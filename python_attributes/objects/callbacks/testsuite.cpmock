@@ -2,8 +2,8 @@
 replay
 record
 
-# If we have an object parameter, must wrap it
-record_object_param
-
 # If we have a builtin parameter, don't wrap it
 record_builtin
+
+# Handle previously unknown objects appearing in callback arguments
+object_params
