@@ -7,3 +7,6 @@ record_builtin
 
 # Handle previously unknown objects appearing in callback arguments
 object_params
+
+# What if we provide a callback that is itself mocked out?
+intercepted_callback
