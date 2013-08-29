@@ -3,6 +3,8 @@
 ->RET:Instance('TheObject', 'theobject1')
 <-PYT:moduletomock.setCallback(theobject1.setValue)
 <-PYT:moduletomock.doStuffWithCallback(42)
-->PYT:theobject1.setValue(42)
+--->PYT:theobject1.setValue(42)
+<---RET:'The answer'
+->RET:'The answer is '
 <-PYT:theobject1.value
 ->RET:42

@@ -2,16 +2,16 @@
 
 from capturemock import capturemock, CaptureMockReplayError
 
-def callback(obj):
-    print("In callback!")
-    print(obj.getValue())
-    print("Leaving callback")
-    return "Finished"
-
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import moduletomock
-    moduletomock.setCallback(callback)
+    def callback():
+        print("In callback! " + moduletomock.getCallbackPostfix())
+
+    def callback2():
+        print("In callback2! " + moduletomock.getCallbackPostfix())
+
+    moduletomock.setCallbacks(callback, callback2)
     print(moduletomock.doStuffWithCallback())
 
 try:

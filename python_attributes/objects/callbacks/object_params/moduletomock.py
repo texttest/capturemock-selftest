@@ -8,6 +8,9 @@ class MyObject:
         self.value = "Callback used"
         return "Returned and " + self.callback(self)
 
+    def getValue(self):
+        return self.value
+
 theObject = None
 
 def setCallback(callback):

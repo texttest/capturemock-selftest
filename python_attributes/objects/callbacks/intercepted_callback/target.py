@@ -7,8 +7,8 @@ def test():
     import moduletomock
     theObj = moduletomock.TheObject()
     moduletomock.setCallback(theObj.setValue)
-    moduletomock.doStuffWithCallback(42)
-    print("The answer is " + str(theObj.value))
+    prefix = moduletomock.doStuffWithCallback(42)
+    print(prefix + str(theObj.value))
 
 try:
     test()

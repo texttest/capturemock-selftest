@@ -5,6 +5,9 @@ record
 # If we have a builtin parameter, don't wrap it
 record_builtin
 
+# Replay based on multiple callbacks with no responses: make sure we parse it right!
+replay_multiple_no_response
+
 # Handle previously unknown objects appearing in callback arguments
 object_params
 

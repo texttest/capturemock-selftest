@@ -3,8 +3,8 @@
 ->RET:Instance('MyObject', 'myobject1')
 <-PYT:myobject1.setCallback(Callback('callback'))
 <-PYT:myobject1.doStuffWithCallback()
-->PYT:callback(myobject1)
+--->PYT:callback(myobject1)
+<-----PYT:myobject1.value
+----->RET:'Callback used'
+<---RET:'Finished'
 ->RET:'Returned and Finished'
-<-PYT:myobject1.value
-->RET:'Callback used'
-<-RET:'Finished'

@@ -2,8 +2,8 @@
 <-PYT:packagetomock.getObject()
 ->RET:Instance('MyObject(object)', 'myobject1')
 <-PYT:myobject1.construct(packagetomock.sub.TheClass)
-->PYT:packagetomock.sub.TheClass()
+--->PYT:packagetomock.sub.TheClass()
+<---RET:Instance('TheClass', 'theclass1')
 ->RET:theclass1
-<-RET:Instance('TheClass', 'theclass1')
 <-PYT:theclass1.getValue()
 ->RET:42

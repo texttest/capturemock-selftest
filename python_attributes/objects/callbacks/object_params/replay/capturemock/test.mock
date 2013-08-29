@@ -1,8 +1,8 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.setCallback(Callback('callback'))
 <-PYT:moduletomock.doStuffWithCallback()
-->PYT:callback(Instance('MyObject', 'myobject1'))
+--->PYT:callback(Instance('MyObject', 'myobject1'))
+<-----PYT:myobject1.getValue()
+----->RET:'Callback used'
+<---RET:'Finished'
 ->RET:'Returned and Finished'
-<-PYT:myobject1.value
-->RET:'Callback used'
-<-RET:'Finished'
