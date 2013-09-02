@@ -1,12 +1,12 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.MyObject('My Value')
-->RET:Instance('MyObject(Base)', 'myobject1')
-<-PYT:myobject1.doNothing()
-<-PYT:myobject1.getValue()
+->RET:Instance('MyObject(Base)', 'myobject_my_value')
+<-PYT:myobject_my_value.doNothing()
+<-PYT:myobject_my_value.getValue()
 ->RET:'Faked My Value'
-<-PYT:moduletomock.MyObject.getOverrideValue(myobject1)
+<-PYT:moduletomock.MyObject.getOverrideValue(myobject_my_value)
 ->RET:'Old Style!'
 <-PYT:moduletomock.MyNewObject('My Value')
-->RET:Instance('MyNewObject(Base, object)', 'mynewobject1')
-<-PYT:mynewobject1.getValue()
+->RET:Instance('MyNewObject(Base, object)', 'mynewobject_my_value')
+<-PYT:mynewobject_my_value.getValue()
 ->RET:'Faked My New Value'

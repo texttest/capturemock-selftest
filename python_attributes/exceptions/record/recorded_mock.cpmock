@@ -7,10 +7,10 @@
 ->RET:raise exceptions.TypeError("call_function() got an unexpected keyword argument 'faking'")
 <-PYT:import fakeurllib
 <-PYT:fakeurllib.urlopen('foo://no.such.site')
-->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror1')
-<-PYT:urlerror1.args
+->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror_foo___no_such_site')
+<-PYT:urlerror_foo___no_such_site.args
 ->RET:('unknown url type: foo',)
 <-PYT:fakeurllib.urlopen('foo://another.no.such.site')
-->RET:raise Instance('URLError', 'urlerror2')
-<-PYT:urlerror2.__str__()
+->RET:raise Instance('URLError', 'urlerror1')
+<-PYT:urlerror1.__str__()
 ->RET:'<urlopen error unknown url type: foo>'
