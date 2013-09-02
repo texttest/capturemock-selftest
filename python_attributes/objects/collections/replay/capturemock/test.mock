@@ -6,7 +6,7 @@
 <-PYT:cow1.speak()
 ->RET:'Moo!'
 <-PYT:moduletomock.get_animal_tuple()
-->RET:(Instance('Cow(object)', 'cow2'), Instance('Dog', 'dog2'))
+->RET:(Instance('Cow', 'cow2'), Instance('Dog', 'dog2'))
 <-PYT:cow2.sizeCompare(dog2)
 ->RET:'Cows are bigger than Dogs'
 <-PYT:moduletomock.Dog()
@@ -14,7 +14,7 @@
 <-PYT:dog3.inPack([cow2, dog2, dog3])
 ->RET:True
 <-PYT:moduletomock.get_animals()
-->RET:[Instance('Cow(object)', 'cow3'), Instance('Dog', 'dog4')]
+->RET:[Instance('Cow', 'cow3'), Instance('Dog', 'dog4')]
 <-PYT:cow3.__repr__()
 ->RET:'<moduletomock.Cow object at 0x2b9d51228790>'
 <-PYT:dog4.__repr__()
