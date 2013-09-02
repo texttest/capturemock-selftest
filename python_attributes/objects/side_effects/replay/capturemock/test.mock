@@ -1,11 +1,11 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.MyObject()
-->RET:Instance('MyObject', 'myobject1')
-<-PYT:myobject1.value
-->RET:'Initial Value'
-<-PYT:myobject1.setValue('My Value')
-<-PYT:myobject1.value
-->RET:'My Value'
-<-PYT:myobject1.setValue('Final Value')
-<-PYT:myobject1.value
-->RET:'Final Value'
+->RET:Instance('MyObject', 'myobject_my_value')
+<-PYT:myobject_my_value.value
+->RET:'Initial Fake Value'
+<-PYT:myobject_my_value.setValue('My Value')
+<-PYT:myobject_my_value.value
+->RET:'My Fake Value'
+<-PYT:myobject_my_value.setValue('Final Value')
+<-PYT:myobject_my_value.value
+->RET:'Final Fake Value'
