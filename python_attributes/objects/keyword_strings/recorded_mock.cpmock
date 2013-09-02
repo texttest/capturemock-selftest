@@ -1,0 +1,6 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.MyObject()
+->RET:Instance('MyObject', 'myobject_my_name')
+<-PYT:myobject_my_name.setData(name='My Name', title='My Title')
+<-PYT:myobject_my_name.getDescription()
+->RET:"{'name': 'My Name', 'title': 'My Title'}"
