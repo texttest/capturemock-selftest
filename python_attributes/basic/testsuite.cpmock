@@ -21,6 +21,9 @@ replay_fails_exact_matching
 # record the same information
 record
 
+# replay the stuff we know about, record the other stuff
+mixed_mode
+
 # If we add extra things to record, don't try to do this unless recording of them is requested
 dont_record_additional
 
