@@ -1,15 +1,14 @@
-# Copy of replay
-replay
 record
 
 # If we have a builtin parameter, don't wrap it
 record_builtin
 
-# Replay based on multiple callbacks with no responses: make sure we parse it right!
-replay_multiple_no_response
+# Copy of replay
+replay
 
 # Handle previously unknown objects appearing in callback arguments
 object_params
 
 # What if we provide a callback that is itself mocked out?
 intercepted_callback
+multiple_no_response

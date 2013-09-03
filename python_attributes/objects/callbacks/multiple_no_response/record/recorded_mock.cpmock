@@ -1,0 +1,16 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.addCallbacks('argument', Callback('moduletomock_argument_callback'), Callback('moduletomock_argument_callback1'))
+<-PYT:moduletomock.addCallbacks('argument', moduletomock_argument_callback, moduletomock_argument_callback1)
+<-PYT:moduletomock.doStuffWithCallback()
+--->PYT:moduletomock_argument_callback()
+<-----PYT:moduletomock.getCallbackPostfix()
+----->RET:'Postfix!'
+--->PYT:moduletomock_argument_callback1()
+<-----PYT:moduletomock.getCallbackPostfix()
+----->RET:'Postfix!'
+--->PYT:moduletomock_argument_callback()
+<-----PYT:moduletomock.getCallbackPostfix()
+----->RET:'Postfix!'
+--->PYT:moduletomock_argument_callback1()
+<-----PYT:moduletomock.getCallbackPostfix()
+----->RET:'Postfix!'

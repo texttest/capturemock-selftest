@@ -1,5 +1,5 @@
 # If we have an object parameter, must wrap it
-replay
+record
 
 # If we have an object parameter, must wrap it
-record
+replay

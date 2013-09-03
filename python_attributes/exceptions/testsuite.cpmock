@@ -1,11 +1,10 @@
-# Copy of replay
-replay
-
 # record the same information
 record
 
+# Copy of replay
+replay
+
 # Replay the traffic from one module and record the rest
-# 
 replay_old_record_new
 
 # Check we handle the situation where one intercepted module throws an exception from another one

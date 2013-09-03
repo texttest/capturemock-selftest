@@ -1,9 +1,0 @@
-<-PYT:import moduletomock
-<-PYT:moduletomock.setCallbacks(Callback('callback'), Callback('callback2'))
-<-PYT:moduletomock.doStuffWithCallback()
---->PYT:callback()
-<-----PYT:moduletomock.getCallbackPostfix()
------>RET:'Postfix!'
---->PYT:callback2()
-<-----PYT:moduletomock.getCallbackPostfix()
------>RET:'Postfix!'

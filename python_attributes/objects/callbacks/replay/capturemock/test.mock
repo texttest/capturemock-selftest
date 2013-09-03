@@ -1,9 +1,9 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.MyObject()
 ->RET:Instance('MyObject', 'myobject1')
-<-PYT:myobject1.setCallback(Callback('callback'))
+<-PYT:myobject1.setCallback(Callback('myobject1_callback'))
 <-PYT:myobject1.doStuffWithCallback()
---->PYT:callback(myobject1)
+--->PYT:myobject1_callback(myobject1)
 <-----PYT:myobject1.value
 ----->RET:'Faked Callback use text'
 <---RET:'Finished'

@@ -5,13 +5,16 @@ from capturemock import capturemock, CaptureMockReplayError
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import moduletomock
-    def callback():
-        print("In callback! " + moduletomock.getCallbackPostfix())
+    class CallbackClass:
+        def callback(self):
+            print("In callback! " + moduletomock.getCallbackPostfix())
 
     def callback2():
         print("In callback2! " + moduletomock.getCallbackPostfix())
 
-    moduletomock.setCallbacks(callback, callback2)
+    cc = CallbackClass()
+    moduletomock.addCallbacks("argument", cc.callback, callback2)
+    moduletomock.addCallbacks("argument", cc.callback, callback2)
     print(moduletomock.doStuffWithCallback())
 
 try:
