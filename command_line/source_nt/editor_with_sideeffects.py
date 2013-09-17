@@ -9,4 +9,8 @@ def editFile(fileName):
 
 fileName = sys.argv[1]
 editFile(fileName)
-editFile("sideeffect")
+myPath = os.getenv("MY_PATH")
+if myPath:
+    editFile(os.path.join(myPath, "sideeffect"))
+else:
+    editFile("sideeffect")

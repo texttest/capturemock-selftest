@@ -5,3 +5,6 @@ ignore_some_edits
 
 # If we've changed directory before running a program, chances are it's because it might write there...
 cwd_changes
+
+# If we've changed environment before running a program, look for file edits there
+env_changes

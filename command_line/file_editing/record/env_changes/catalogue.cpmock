@@ -1,0 +1,14 @@
+The following new files/directories were created:
+<Test Directory>
+----capturemock
+--------test.mock
+--------test_recorded.files
+------------file
+------------tmpdir
+----------------sideeffect
+----tmpdir
+--------sideeffect
+
+The following existing files/directories changed their contents:
+<Test Directory>
+----file
