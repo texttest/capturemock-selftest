@@ -41,3 +41,6 @@ function_name
 
 # Check we forward the return value
 function_return_value
+
+# __file__ needs to be our own, not the real one
+module_file
