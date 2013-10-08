@@ -14,7 +14,7 @@ def test():
 def test2():
     import moduletomock
 
-    obj = moduletomock.getObject("name2")
+    obj = moduletomock.getObject("name")
     print(obj.getNumber() + 2)
     
 
