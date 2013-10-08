@@ -1,6 +1,6 @@
 <-PYT:import fakeurllib
 <-PYT:fakeurllib.urlopen('foo://no.such.site')
-->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror1')
+->RET:raise Instance('URLError(IOError)', 'urlerror1')
 <-PYT:urlerror1.args
 ->RET:('No such site, you wally!',)
 <-PYT:fakeurllib.urlopen('foo://another.no.such.site')
