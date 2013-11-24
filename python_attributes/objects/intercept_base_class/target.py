@@ -9,6 +9,9 @@ def test():
         def getOverrideValue(self):
             return "Overridden " + moduletomock.MyObject.getOverrideValue(self)
 
+        def getDerivedOnly(self):
+            return "Derived Only"
+
     class MyNewDerived(moduletomock.MyNewObject):
         def getOverrideValue(self):
             return "Overridden!"
@@ -17,6 +20,7 @@ def test():
     theObject.doNothing()
     print(theObject.getValue())
     print(theObject.getOverrideValue())
+    print(theObject.getDerivedOnly())
     print(isinstance(theObject, moduletomock.Base))
 
     theObject = MyNewDerived("My Value")
