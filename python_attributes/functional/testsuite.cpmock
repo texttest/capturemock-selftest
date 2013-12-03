@@ -1,3 +1,6 @@
+# Check that recording returns unique object instances
+cars
+
 # Make sure all our arguments make it through to the intercepted program
 argument_transfer
 
