@@ -6,3 +6,6 @@ replay
 
 # Import the module correctly when it appears in a collection
 module_in_collection
+
+# Check that recording returns unique object instances when they are in a list attribute
+list_attribute
