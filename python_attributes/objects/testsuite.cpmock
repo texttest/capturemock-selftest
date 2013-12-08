@@ -1,6 +1,3 @@
-# colletions.MutableMapping
-mutable_mapping
-
 # Copy of replay
 replay
 
@@ -58,6 +55,9 @@ iteration
 
 # Check how we handle 'if x' on intercepted objects
 nonzero_logic
+
+# colletions.MutableMapping
+mutable_mapping
 
 # static attributes, method calls etc
 static_calls
