@@ -6,6 +6,10 @@
 ->RET:'Faked My Value'
 <-PYT:moduletomock.MyObject.getOverrideValue(myobject_my_value)
 ->RET:'Old Style!'
+<-PYT:myobject_my_value.getDerivedFromBase()
+--->PYT:myobject_my_value.getDerivedOnly()
+<---RET:'Derived Only'
+->RET:'Faked Derived Only'
 <-PYT:moduletomock.MyNewObject('My Value')
 ->RET:Instance('MyNewObject(Base, object)', 'mynewobject_my_value')
 <-PYT:mynewobject_my_value.getValue()

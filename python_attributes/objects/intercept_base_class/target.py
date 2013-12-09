@@ -11,6 +11,9 @@ def test():
 
         def getDerivedOnly(self):
             return "Derived Only"
+        
+        def getDerivedOnly2(self):
+            return "Derived Only 2"
 
     class MyNewDerived(moduletomock.MyNewObject):
         def getOverrideValue(self):
@@ -21,6 +24,7 @@ def test():
     print(theObject.getValue())
     print(theObject.getOverrideValue())
     print(theObject.getDerivedOnly())
+    print(theObject.getDerivedFromBase())
     print(isinstance(theObject, moduletomock.Base))
 
     theObject = MyNewDerived("My Value")

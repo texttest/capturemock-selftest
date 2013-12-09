@@ -15,3 +15,7 @@ class MyObject(Base):
 
     def doNothing(self):
         pass
+
+    def getDerivedFromBase(self):
+        return self.getDerivedOnly()
+
