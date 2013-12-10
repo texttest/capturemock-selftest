@@ -53,6 +53,9 @@ shorten_reference
 unusable_object_args
 iteration
 
+# Copy of iteration
+custom_list_standard_iterator
+
 # Check how we handle 'if x' on intercepted objects
 nonzero_logic
 

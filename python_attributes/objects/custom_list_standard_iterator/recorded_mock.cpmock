@@ -1,0 +1,11 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.MyList([1, 2])
+->RET:Instance('MyList(list)', 'mylist1')
+<-PYT:mylist1.__iter__()
+->RET:Instance('listiterator(object)', 'listiterator1')
+<-PYT:listiterator1.next()
+->RET:1
+<-PYT:listiterator1.next()
+->RET:2
+<-PYT:listiterator1.next()
+->RET:raise exceptions.StopIteration('')
