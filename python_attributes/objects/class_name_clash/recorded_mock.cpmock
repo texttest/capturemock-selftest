@@ -1,0 +1,5 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.getObject()
+->RET:Instance('Instance', 'instance1')
+<-PYT:instance1.getValue()
+->RET:42

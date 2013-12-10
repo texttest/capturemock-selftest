@@ -62,6 +62,9 @@ nonzero_logic
 # colletions.MutableMapping
 mutable_mapping
 
+# We use the name Instance internally...
+class_name_clash
+
 # static attributes, method calls etc
 static_calls
 
