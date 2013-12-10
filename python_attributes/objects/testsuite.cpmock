@@ -63,7 +63,7 @@ nonzero_logic
 mutable_mapping
 
 # We use the name Instance internally...
-class_name_clash
+class_name_clashes
 
 # static attributes, method calls etc
 static_calls

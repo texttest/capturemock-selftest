@@ -5,9 +5,11 @@ from capturemock import capturemock, CaptureMockReplayError
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import moduletomock
-    obj = moduletomock.getObject()
+    obj = moduletomock.getInstance()
     print(obj.getValue())
     print(isinstance(obj, moduletomock.Instance))
+    obj2 = obj.callback
+    print(obj2.getValue())
 
 try:
     test()

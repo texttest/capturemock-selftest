@@ -1,0 +1,9 @@
+<-PYT:import moduletomock
+<-PYT:moduletomock.getInstance()
+->RET:Instance('Instance', 'instance1')
+<-PYT:instance1.getValue()
+->RET:42
+<-PYT:instance1.callback
+->RET:Instance('Callback', 'callback1')
+<-PYT:callback1.getValue()
+->RET:58
