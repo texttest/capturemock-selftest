@@ -60,8 +60,7 @@ custom_list_standard_iterator
 nonzero_logic
 
 # colletions.MutableMapping
-mutable_mapping_record
-mutable_mapping_replay
+mutable_mapping
 
 # We use the name Instance internally...
 class_name_clashes
