@@ -1,0 +1,8 @@
+
+[Reported by geoff at 08Dec22:13:21]
+search_string:metaclass conflict: the metaclass of a derived clas
+use_regexp:0
+search_file:stderr
+ignore_other_errors:1
+full_description:No support for intercepting objects derived from Abstract Base Classes currently. See LP bug 1256218
+brief_description:LP bug 1256218
