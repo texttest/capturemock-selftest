@@ -1,6 +1,6 @@
-from capturemock import capturemock, RECORD
+from capturemock import capturemock
 
-@capturemock('moduletomock', mode=RECORD)
+@capturemock('moduletomock')
 def test():
     from moduletomock import MyDict
 
