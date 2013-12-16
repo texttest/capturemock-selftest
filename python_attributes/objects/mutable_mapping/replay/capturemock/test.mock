@@ -4,4 +4,4 @@
 <-PYT:moduletomock.MyDict(animal='dog')
 ->RET:Instance('MyDict(_abcoll.MutableMapping)', 'mydict_dog')
 <-PYT:mydict_dog.__getitem__('animal')
-->RET:'dog'
+->RET:'cat'
