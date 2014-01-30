@@ -9,3 +9,6 @@ replay_old_record_new
 
 # Check we handle the situation where one intercepted module throws an exception from another one
 cross_modules
+
+# Check we can replay exceptions thrown by constructors
+from_constructor
