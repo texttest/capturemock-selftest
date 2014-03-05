@@ -1,4 +1,4 @@
-<-CMD:env 'MY_PATH=/nfs/vm/texttest-tmp/geoff/cpmock.cmdline.17Sep163351.28506/cpmock.cmdline/command_line/file_editing/record/env_changes/tmpdir' editor_with_sideeffects /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.17Sep163351.28506/cpmock.cmdline/command_line/file_editing/record/env_changes/file
+<-CMD:env 'MY_PATH=My path is /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.05Mar120934.16003/cpmock.cmdline/command_line/file_editing/record/env_changes/tmpdir' editor_with_sideeffects /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.05Mar120934.16003/cpmock.cmdline/command_line/file_editing/record/env_changes/file
 ->FIL:file
 ->FIL:tmpdir
 ->OUT:Editing file file

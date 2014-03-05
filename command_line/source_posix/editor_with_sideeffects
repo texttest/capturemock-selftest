@@ -11,6 +11,6 @@ fileName = sys.argv[1]
 editFile(fileName)
 myPath = os.getenv("MY_PATH")
 if myPath:
-    editFile(os.path.join(myPath, "sideeffect"))
+    editFile(os.path.join(myPath.split()[-1], "sideeffect"))
 else:
     editFile("sideeffect")
