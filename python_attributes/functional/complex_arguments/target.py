@@ -12,8 +12,8 @@ is a large unicode string"""
     if sys.version_info[0] == 2:
         strVal = unicode(strVal)
 
-    withQuote = """This one
-has a ' in it"""
+    withQuote = """'This one'
+has single quotes"""
 
     windowsPath = "C:\\no_such_directory"
 
