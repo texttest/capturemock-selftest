@@ -2,4 +2,4 @@
 <-PYT:moduletomock.MyObject()
 ->RET:Instance('MyObject', 'myobject1')
 <-PYT:moduletomock.MyObject()
-->RET:raise exceptions.RuntimeError('Not allowed to construct these!')
+->RET:raise RuntimeError('Not allowed to construct these!')
