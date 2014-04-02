@@ -1,3 +1,3 @@
 Replayed calls do not match those recorded.
-Could not find any replay request matching '<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.16Jun173203.6720/cpmock.cmdline/command_line/normal/replay/exact_matching_fails/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x'
+Could not find any replay request matching '<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.02Apr103534.29387/cpmock.cmdline/command_line/normal/replay/exact_matching_fails/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH:/another/extra/path' secondcall -c -x'
 Either rerun with capturemock in record mode or update the stored mock file by hand.

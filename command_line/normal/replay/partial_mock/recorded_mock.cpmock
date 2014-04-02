@@ -1,4 +1,4 @@
-<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan210700.7778/cpmock.cmdline/command_line/normal/replay/partial_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.02Apr103534.29387/cpmock.cmdline/command_line/normal/replay/partial_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH:/another/extra/path' secondcall -c -x
 ->OUT:The current working directory is tmpdir
 The process ID is fake
 ->ERR:secondcall called with ['-c', '-x'] as arguments

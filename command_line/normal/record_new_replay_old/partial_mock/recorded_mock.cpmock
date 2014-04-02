@@ -1,12 +1,12 @@
 <-CMD:firstcall -a -b -c "hello | goodbye"
 ->OUT:firstcall called with 5 arguments
-The time is now Sat Jan 15 20:54:44 2011
+The time is now Wed Apr  2 10:35:50 2014
 ->EXC:1
 <-CMD:firstcall -a -b -c "hello | goodbye"
 ->OUT:firstcall called with 5 arguments
-The time is now Sat Jan 15 20:54:44 2011
+The time is now Wed Apr  2 10:35:50 2014
 ->EXC:1
-<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan205443.7445/cpmock.cmdline/command_line/normal/record_new_replay_old/partial_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.02Apr103534.29387/cpmock.cmdline/command_line/normal/record_new_replay_old/partial_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH:/another/extra/path' secondcall -c -x
 ->OUT:The current working directory is tmpdir
 The process ID is fake
 ->ERR:secondcall called with ['-c', '-x'] as arguments

@@ -1,13 +1,13 @@
 <-CMD:firstcall -a -b -c "hello | goodbye"
 ->OUT:firstcall called with 5 arguments
-The time is now Sat Jan 15 20:35:07 2011
+The time is now Wed Apr  2 10:35:46 2014
 ->EXC:1
 <-CMD:firstcall -a -b -c "hello | goodbye"
 ->OUT:firstcall called with 5 arguments
-The time is now Sat Jan 15 20:35:07 2011
+The time is now Wed Apr  2 10:35:47 2014
 ->EXC:1
-<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan203504.6894/cpmock.cmdline/command_line/normal/record/remove_old_file/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.02Apr103534.29387/cpmock.cmdline/command_line/normal/record/remove_old_file/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH:/another/extra/path' secondcall -c -x
 ->OUT:The current working directory is tmpdir
-The process ID is 6911
+The process ID is 55114
 ->ERR:secondcall called with ['-c', '-x'] as arguments
 MY_ENV_VAR = 'value'

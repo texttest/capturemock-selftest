@@ -6,7 +6,7 @@ The time is now Mon Aug 28 12:28:33 2006
 ->OUT:firstcall called with 5 arguments
 The time is now Mon Aug 28 12:28:34 2006
 ->EXC:1
-<-CMD:cd /home/geoff/.texttest/tmp/cpmock.cmdline.15Jan210015.7628/cpmock.cmdline/command_line/normal/replay/replay_bad_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH' secondcall -c -x
+<-CMD:cd /nfs/vm/texttest-tmp/geoff/cpmock.cmdline.02Apr103534.29387/cpmock.cmdline/command_line/normal/replay/replay_bad_mock/tmpdir; env --unset=MY_ENV_FOR_UNSET 'MY_ENV_VAR=value' 'PATH=/some/extra/path:$PATH:/another/extra/path' secondcall -c -x
 ->OUT:The process ID is fake
 ->ERR:secondcall called with ['-c', '-x'] as arguments
 MY_ENV_VAR = 'value'
