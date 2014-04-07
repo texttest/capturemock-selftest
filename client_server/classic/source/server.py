@@ -32,7 +32,7 @@ class MyRequestHandler(StreamRequestHandler):
         elif not clientData.startswith("Don't answer"):
             self.wfile.write("Length was " + str(len(clientData)))
 
-server = TCPServer((socket.gethostname(), 0), MyRequestHandler)
+server = TCPServer(("localhost", 0), MyRequestHandler)
 host, port = server.socket.getsockname()
 address = host + ":" + str(port)
 message = "Started string-length server at " + address

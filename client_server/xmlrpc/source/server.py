@@ -9,7 +9,7 @@ class RequestHandler(SimpleXMLRPCRequestHandler):
     rpc_paths = ('/RPC2',)
 
 # Create server
-server = SimpleXMLRPCServer((socket.gethostname(), 0), requestHandler=RequestHandler, logRequests=False)
+server = SimpleXMLRPCServer(("localhost", 0), requestHandler=RequestHandler, logRequests=False)
 server.register_introspection_functions()
 
 # Register pow() function; this will use the value of
