@@ -1,0 +1,8 @@
+<-PYT:moduletomock.ClassName.staticMethod()
+->RET:'Real static method answer'
+<-PYT:moduletomock.ClassName.otherStaticMethod()
+->RET:'Other Real static method answer'
+<-PYT:moduletomock.ClassName()
+->RET:Instance('ClassName', 'classname1')
+<-PYT:classname1.otherStaticMethod()
+->RET:'Other Real static method answer'
