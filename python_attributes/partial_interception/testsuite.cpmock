@@ -35,5 +35,8 @@ ignore_repeats
 # Intercept all usage of a certain class
 class_name
 
+# Intercept all usage of a certain class, don't intercept base classes if they're in the same module
+class_ignore_base_classes
+
 # Test we can handle builtin modules. datetime is only builtin on Windows but it's a very common usage.
 builtin_modules
