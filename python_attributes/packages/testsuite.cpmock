@@ -21,5 +21,8 @@ intercept_submodule
 # need to include it properly
 submodule_import_in_other
 
+# Reimporting a submodule of an intercepted module can cause trouble
+reimport_submodule
+
 # Pass a class itself (defined in a subpackage) as an argument, handle callbacks
 class_arguments

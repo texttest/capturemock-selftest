@@ -1,0 +1,7 @@
+<-PYT:import packagetomock
+<-PYT:packagetomock.mymodule.__path__
+->RET:raise exceptions.AttributeError("'module' object has no attribute '__path__'")
+<-PYT:packagetomock.mymodule.getObject()
+->RET:Instance('MyObject', 'myobject1')
+<-PYT:myobject1.getValue()
+->RET:'Hello'
