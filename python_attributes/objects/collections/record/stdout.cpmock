@@ -1,7 +1,7 @@
-Rover says Woof!
 Daisy says Moo!
+Rover says Woof!
 Cows are bigger than Dogs
 My dog is in the pack
-[<moduletomock.Cow object at 0x9e57dac>, A dog]
+[<moduletomock.Cow object at 0x1c69950>, A dog]
 Milking the Cow...
 BadAnimal Exception: Don't milk the dog!

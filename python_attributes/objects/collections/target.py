@@ -5,7 +5,7 @@ from capturemock import capturemock, CaptureMockReplayError
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import moduletomock
-    for name, animal in list(moduletomock.get_named_animals().items()):
+    for name, animal in sorted(list(moduletomock.get_named_animals().items())):
         print(name + " says " + animal.speak())
 
     animal1, animal2 = moduletomock.get_animal_tuple()

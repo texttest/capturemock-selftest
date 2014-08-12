@@ -2,3 +2,6 @@ link_test_path:fakeurllib.py
 
 [run_dependent_text]
 stdout:fakeurllib\.(URLError: <urlopen){REPLACE \1}
+stdout:'no_such_module'{REPLACE no_such_module}
+recorded_mock:OSError{REPLACE IOError}
+recorded_mock:"No module named 'no_such_module'"{REPLACE 'No module named no_such_module'}

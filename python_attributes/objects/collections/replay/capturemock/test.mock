@@ -1,10 +1,10 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.get_named_animals()
 ->RET:{'Rover': Instance('Dog', 'dog1'), 'Daisy': Instance('Cow(object)', 'cow1')}
-<-PYT:dog1.speak()
-->RET:'Woof Woof!'
 <-PYT:cow1.speak()
 ->RET:'Moo!'
+<-PYT:dog1.speak()
+->RET:'Woof Woof!'
 <-PYT:moduletomock.get_animal_tuple()
 ->RET:(Instance('Cow', 'cow2'), Instance('Dog', 'dog2'))
 <-PYT:cow2.sizeCompare(dog2)
