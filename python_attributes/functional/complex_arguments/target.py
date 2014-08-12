@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from capturemock import capturemock
+from capturemock import capturemock, CaptureMockReplayError
 import sys
 
 @capturemock(rcFiles=["capturemockrc"])
@@ -24,6 +24,6 @@ has single quotes"""
 
 try:
     test()
-except:
+except CaptureMockReplayError:
     import sys; sys.stderr.write(str(sys.exc_info()[1]) + "\n")
     

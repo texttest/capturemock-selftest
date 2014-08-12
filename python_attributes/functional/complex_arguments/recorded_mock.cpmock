@@ -1,5 +1,7 @@
 <-PYT:import moduletomock
-<-PYT:moduletomock.call_function({'windows_path': 'C:\\no_such_directory', 'quotestring': """'This one'
-has single quotes""", 'string': u'''This
-is a large unicode string'''})
+<-PYT:moduletomock.call_function({'quotestring': """'This one'
+has single quotes""",
+ 'string': u'''This
+is a large unicode string''',
+ 'windows_path': 'C:\\no_such_directory'})
 ->RET:'REAL_RETURN'
