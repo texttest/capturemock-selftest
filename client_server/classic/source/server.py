@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from SocketServer import TCPServer, StreamRequestHandler
-import sys, os, socket
+import sys, os, socket, time
 
 def createSocket():
     servAddr = os.getenv("CAPTUREMOCK_SERVER")
@@ -37,6 +37,7 @@ host, port = server.socket.getsockname()
 address = host + ":" + str(port)
 message = "Started string-length server at " + address
 sendServerState(message)
+time.sleep(0.1) # Prevent race conditions
 # Not all server states set the server location. Make sure we remember this...
 sendServerState("Nice day today!")
 print message
