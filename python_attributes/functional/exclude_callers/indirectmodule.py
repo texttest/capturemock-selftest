@@ -1,5 +1,5 @@
 
-import moduletomock, moduletomock2
+import moduletomock
 
 def getValue(*args):
     return moduletomock.getValue(*args)

@@ -11,10 +11,6 @@ def test():
     print(indirectmodule.getValue(2))
     print(moduletomock.getValue(3))
     print(indirectmodule.getValue(4))
-    try:
-        import moduletomock2
-    except ImportError:
-        print("Failed to import bad module as expected")
 
 test()
 
