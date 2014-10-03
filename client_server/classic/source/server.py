@@ -19,11 +19,7 @@ def sendServerState(stateDesc):
         sock.close()
 
 class MyRequestHandler(StreamRequestHandler):
-    calledBefore = False
     def handle(self):
-        if not self.calledBefore:
-            MyRequestHandler.calledBefore = True
-            return
         clientData = self.rfile.read()
         if clientData.strip() == "terminate":
             self.wfile.write("Exiting...")

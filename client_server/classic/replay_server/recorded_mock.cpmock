@@ -1,6 +1,7 @@
-<-SRV:Started string-length server at 10.67.18.24:41619
+<-SRV:Started string-length server at 127.0.0.1:57052
 <-SRV:Nice day today!
 ->CLI:Here is a string
+<-SRV:Length was 17
 ->CLI:Here is a longer string
 <-SRV:Length was 24
 ->CLI:Don't answer this one
