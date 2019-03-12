@@ -1,0 +1,29 @@
+
+[run_dependent_text]
+# Don't know where these entries come from, filter them for now...
+recorded_mock*:<-PYT:moduletomock.__spec__
+recorded_mock*:->RET:ModuleSpec(name='moduletomock'
+
+recorded_mock*:<-PYT:moduletomock2.__spec__
+recorded_mock*:->RET:ModuleSpec(name='moduletomock2'
+
+recorded_mock*:<-PYT:packagetomock.__spec__
+recorded_mock*:->RET:ModuleSpec(name='packagetomock'
+
+recorded_mock*:<-PYT:fakeurllib.__spec__
+recorded_mock*:->RET:raise AttributeError("'NoneType' object has no attribute '__spec__'")
+recorded_mock*:->RET:ModuleSpec(name='fakeurllib',
+
+recorded_mock*:<-PYT:socket.__spec__
+recorded_mock*:->RET:ModuleSpec(name='socket'
+
+recorded_mock*:<-PYT:packagetomock.sub.__spec__
+recorded_mock*:->RET:ModuleSpec(name='packagetomock.sub'
+
+recorded_mock*:<-PYT:packagetomock.sub.moduletomock.__spec__
+recorded_mock*:->RET:ModuleSpec(name='packagetomock.sub.moduletomock'
+
+recorded_mock*:<-PYT:packagetomock.mymodule.__spec__
+recorded_mock*:->RET:ModuleSpec(name='packagetomock.mymodule'
+
+[end]
