@@ -29,7 +29,7 @@ level=DEBUG
 [handler_Replay]
 class=FileHandler
 formatter=debug
-args=(os.devnull, 'a')
+#args=(os.devnull, 'a')
 args=('replaylog.cpmock', 'a')
 
 # ======= Section for Server ======
