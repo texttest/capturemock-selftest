@@ -1,6 +1,4 @@
 
-import_config_file:site_configfile_python3
-
 test_data_ignore:__pycache__
 
 [run_dependent_text]
