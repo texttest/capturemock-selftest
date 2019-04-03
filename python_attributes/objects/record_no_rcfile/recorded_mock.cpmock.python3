@@ -4,4 +4,4 @@
 <-PYT:theclass1.getNumber()
 ->RET:0
 <-PYT:theclass1.nonsense
-->RET:raise AttributeError("'TheClass' object  'nonsense'")
+->RET:raise AttributeError("'TheClass' object has no attribute 'nonsense'")
