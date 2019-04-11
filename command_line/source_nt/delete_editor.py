@@ -3,7 +3,7 @@
 import sys, os, shutil
 
 def editFile(fileName):
-    print "Removing file", os.path.basename(fileName)
+    print("Removing file", os.path.basename(fileName))
     if os.path.isdir(fileName):
         shutil.rmtree(fileName)
     else:
@@ -16,5 +16,5 @@ elif os.path.isdir(fileName):
     for file in sorted(os.listdir(fileName)):
         editFile(os.path.join(fileName, file))
 else:
-    print "No such file", fileName
+    print("No such file", fileName)
 

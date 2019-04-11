@@ -1,3 +1,5 @@
 [command line]
 intercepts = dosleep
 
+[general]
+log_config_file = logging

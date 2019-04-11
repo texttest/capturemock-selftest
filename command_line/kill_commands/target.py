@@ -13,8 +13,8 @@ def showExitCode(exitCode):
 proc = subprocess.Popen([ "dosleep", "100" ])
 time.sleep(3)
 if proc.poll():
-    print "Process terminated already."
+    print("Process terminated already.")
 else:
     proc.send_signal(signal.SIGTERM)
     exitCode = proc.wait()
-    print "Terminated process: exit code was", showExitCode(exitCode)
+    print("Terminated process: exit code was", showExitCode(exitCode))

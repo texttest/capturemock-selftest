@@ -7,7 +7,7 @@ import os, socket
 def sendText(text, serverAddress):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect(serverAddress)
-    sock.sendall(text)
+    sock.sendall(text.encode())
     return sock
 
 def sendRecord(code, *args):
@@ -17,7 +17,7 @@ def sendRecord(code, *args):
 def printReplay(code, *args):
     sock = sendText("SUT_CUSTOM:" + code, *args)
     sock.shutdown(1)
-    print sock.makefile().read()
+    print(sock.makefile().read())
     sock.close()
 
 def getServerAddress():

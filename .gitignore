@@ -1,1 +1,5 @@
 *.pyc
+*.spec
+command_line/source_nt/build/delete_editor/Analysis-00.toc
+command_line/source_nt/build/
+command_line/source_nt/dist/

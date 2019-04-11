@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-from SocketServer import TCPServer, StreamRequestHandler
+from socketserver import TCPServer, StreamRequestHandler
 import sys, os, socket, time
+from locale import getpreferredencoding
 
 def createSocket():
     servAddr = os.getenv("CAPTUREMOCK_SERVER")
@@ -15,18 +16,19 @@ def createSocket():
 def sendServerState(stateDesc):
     sock = createSocket()
     if sock:
-        sock.sendall("SUT_SERVER:" + stateDesc + "\n")
+        sock.sendall(("SUT_SERVER:" + stateDesc + "\n").encode(getpreferredencoding()))
         sock.close()
 
 class MyRequestHandler(StreamRequestHandler):
     def handle(self):
-        clientData = self.rfile.read()
+        clientData = str(self.rfile.read(), getpreferredencoding())
         if clientData.strip() == "terminate":
-            self.wfile.write("Exiting...")
+            self.wfile.write(b"Exiting...")
             global gotExit
             gotExit = True
         elif not clientData.startswith("Don't answer"):
-            self.wfile.write("Length was " + str(len(clientData)))
+            answer = "Length was " + str(len(clientData))
+            self.wfile.write(answer.encode())
 
 server = TCPServer(("localhost", 0), MyRequestHandler)
 host, port = server.socket.getsockname()
@@ -36,7 +38,7 @@ sendServerState(message)
 time.sleep(0.1) # Prevent race conditions
 # Not all server states set the server location. Make sure we remember this...
 sendServerState("Nice day today!")
-print message
+print(message)
 sys.stdout.flush()
 
 gotExit = False

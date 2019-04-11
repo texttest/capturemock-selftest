@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 
 import sys, socket
+from locale import getpreferredencoding
 
 def runQuery(serverAddress, toSend):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect(serverAddress)
-    sock.sendall(toSend)
+    sock.sendall(toSend.encode(getpreferredencoding()))
     sock.shutdown(1)
     response = sock.makefile().read()
-    print "Sent to server:", toSend
-    print "Got reply:", response
+    print("Sent to server:", toSend)
+    print("Got reply:", response)
     sock.close()
 
 servAddr = sys.argv[1]

@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
-import os, subprocess, signal, xmlrpclib
+import os, subprocess, signal, xmlrpc.client
 from threading import Thread
 from time import sleep
 
 def sendServerState(address):
     servAddr = os.getenv("CAPTUREMOCK_SERVER")
     if servAddr:
-        proxy = xmlrpclib.ServerProxy(servAddr)
+        proxy = xmlrpc.client.ServerProxy(servAddr)
         proxy.setServerLocation(address)
 
 def runClientThread():
