@@ -20,6 +20,7 @@ filename_convention_scheme:standard
 
 link_test_path:logging
 link_test_path:target.py
+link_test_path:target_modules
 # Also used by custom client via command line
 link_test_path:moduletomock.py
 link_test_path:capturemockrc

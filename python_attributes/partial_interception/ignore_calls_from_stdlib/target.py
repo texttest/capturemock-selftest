@@ -7,7 +7,7 @@ def test():
     import logging, os, sys
 
     logging.basicConfig(level=logging.WARNING, stream=sys.stdout, format="%(message)s")
-    logging.warn("My process ID is " + str(os.getpid()) + "\n")
+    logging.warning("My process ID is " + str(os.getpid()) + "\n")
 
 try:
     test()

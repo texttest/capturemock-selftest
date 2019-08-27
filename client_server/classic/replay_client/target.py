@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
-import os
-os.system("client.py " + os.getenv("CAPTUREMOCK_SERVER"))
+import subprocess, sys, os
+subprocess.call([ sys.executable, "target_modules/client.py", os.getenv("CAPTUREMOCK_SERVER") ])

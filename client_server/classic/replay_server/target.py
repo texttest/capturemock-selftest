@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
-import os
-os.system("server.py")
+import subprocess, sys
+subprocess.call([ sys.executable, "target_modules/server.py"])
