@@ -26,7 +26,7 @@ link_test_path:moduletomock.py
 link_test_path:capturemockrc
 copy_test_path:capturemock
 
-test_data_ignore:*.pyc
+test_data_ignore:__pycache__
 
 create_catalogues:true
 

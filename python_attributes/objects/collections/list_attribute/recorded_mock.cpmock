@@ -1,6 +1,6 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.wheels
-->RET:[Instance('Wheel(object)', 'wheel1'), Instance('Wheel', 'wheel2')]
+->RET:[Instance('Wheel', 'wheel1'), Instance('Wheel', 'wheel2')]
 <-PYT:wheel1.id
 ->RET:1
 <-PYT:wheel2.id

@@ -11,6 +11,6 @@
 <---RET:'Derived Only'
 ->RET:'Derived Only'
 <-PYT:moduletomock.MyNewObject('My Value')
-->RET:Instance('MyNewObject(Base, object)', 'mynewobject_my_value')
+->RET:Instance('MyNewObject(Base)', 'mynewobject_my_value')
 <-PYT:mynewobject_my_value.getValue()
 ->RET:'My Value'

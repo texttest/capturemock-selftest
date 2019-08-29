@@ -1,6 +1,6 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.get_named_animals()
-->RET:{'Daisy': Instance('Cow(object)', 'cow1'), 'Rover': Instance('Dog', 'dog1')}
+->RET:{'Daisy': Instance('Cow', 'cow1'), 'Rover': Instance('Dog', 'dog1')}
 <-PYT:cow1.speak()
 ->RET:'Moo!'
 <-PYT:dog1.speak()
@@ -16,12 +16,12 @@
 <-PYT:moduletomock.get_animals()
 ->RET:[Instance('Cow', 'cow3'), Instance('Dog', 'dog4')]
 <-PYT:cow3.__repr__()
-->RET:'<moduletomock.Cow object at 0x1d84cd0>'
+->RET:'<moduletomock.Cow object at 0x0000022928ACFBE0>'
 <-PYT:dog4.__repr__()
 ->RET:'A dog'
 <-PYT:cow3.milk()
 ->RET:'Milking'
 <-PYT:dog4.milk()
-->RET:raise Instance('BadAnimal(exceptions.Exception)', 'badanimal1')
+->RET:raise Instance('BadAnimal(Exception)', 'badanimal1')
 <-PYT:badanimal1.__str__()
 ->RET:"Don't milk the dog!"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os, subprocess, signal, xmlrpc.client
+import os, sys, subprocess, signal, xmlrpc.client
 from threading import Thread
 from time import sleep
 
@@ -12,17 +12,13 @@ def sendServerState(address):
 
 def runClientThread():
     sleep(4) # give the server chance to start
-    os.system("client.py " + os.getenv("CAPTUREMOCK_SERVER"))
-
-def getServerArgs():
-    for dir in os.getenv("PATH").split(os.pathsep):
-        path = os.path.join(dir, "server.py")
-        if os.path.isfile(path):
-            return [ "python", path ]
+    clientPath = os.path.join(os.getenv("TEXTTEST_SANDBOX"), "target_modules", "client.py")
+    subprocess.call([ sys.executable, clientPath, os.getenv("CAPTUREMOCK_SERVER") ])
 
 clientThread = Thread(target=runClientThread)
 clientThread.start()
-serverProc = subprocess.Popen(getServerArgs(), stdout=subprocess.PIPE, stderr=open(os.devnull, "w"), cwd=os.path.expanduser("~"))
+serverPath = os.path.join(os.getenv("TEXTTEST_SANDBOX"), "target_modules", "server.py")
+serverProc = subprocess.Popen([ sys.executable, serverPath ], stdout=subprocess.PIPE, stderr=open(os.devnull, "w"), cwd=os.path.expanduser("~"))
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
 sendServerState(serverAddress)
 clientThread.join()

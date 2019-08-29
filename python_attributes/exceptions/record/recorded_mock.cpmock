@@ -1,16 +1,22 @@
 <-PYT:import moduletomock
 <-PYT:import no_such_module
-->RET:raise exceptions.ImportError('No module named no_such_module')
+->RET:raise ModuleNotFoundError("No module named 'no_such_module'")
 <-PYT:moduletomock.no_such_method
-->RET:raise exceptions.AttributeError("'module' object has no attribute 'no_such_method'")
+->RET:raise AttributeError("module 'moduletomock' has no attribute 'no_such_method'")
 <-PYT:moduletomock.call_function('argument', faking=True)
-->RET:raise exceptions.TypeError("call_function() got an unexpected keyword argument 'faking'")
+->RET:raise TypeError("call_function() got an unexpected keyword argument 'faking'")
 <-PYT:import fakeurllib
 <-PYT:fakeurllib.urlopen('foo://no.such.site')
-->RET:raise Instance('URLError(exceptions.IOError)', 'urlerror_foo___no_such_site')
+->RET:raise Instance('URLError(OSError)', 'urlerror_foo___no_such_site')
 <-PYT:urlerror_foo___no_such_site.args
 ->RET:('unknown url type: foo',)
 <-PYT:fakeurllib.urlopen('foo://another.no.such.site')
 ->RET:raise Instance('URLError', 'urlerror1')
+<-PYT:urlerror1.__bool__
+->RET:raise AttributeError("'URLError' object has no attribute '__bool__'")
+<-PYT:urlerror1.__len__
+->RET:raise AttributeError("'URLError' object has no attribute '__len__'")
+<-PYT:urlerror1.__suppress_context__
+->RET:False
 <-PYT:urlerror1.__str__()
 ->RET:'<urlopen error unknown url type: foo>'

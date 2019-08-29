@@ -1,6 +1,6 @@
-Caught exception: No module named no_such_module
-Caught exception: 'module' object has no attribute 'no_such_method'
+Caught exception: No module named 'no_such_module'
+Caught exception: module 'moduletomock' has no attribute 'no_such_method'
 Caught exception: call_function() got an unexpected keyword argument 'faking'
 Caught exception: unknown url type: foo
-URLError: <urlopen error unknown url type: foo>
+fakeurllib.URLError: <urlopen error unknown url type: foo>
 

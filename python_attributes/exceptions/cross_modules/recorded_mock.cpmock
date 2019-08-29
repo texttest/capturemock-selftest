@@ -1,5 +1,5 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.callFunction()
-->RET:raise Instance('BadCallException(MyException, exceptions.Exception)', 'badcallexception1')
+->RET:raise Instance('BadCallException(MyException, Exception)', 'badcallexception1')
 <-PYT:badcallexception1.__str__()
 ->RET:'Bad Call!'

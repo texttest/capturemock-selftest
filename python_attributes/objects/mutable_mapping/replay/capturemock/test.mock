@@ -1,7 +1,7 @@
 <-PYT:import moduletomock
 <-PYT:moduletomock.__path__
-->RET:raise exceptions.AttributeError("'module' object has no attribute '__path__'")
+->RET:raise AttributeError("'module' object has no attribute '__path__'")
 <-PYT:moduletomock.MyDict(animal='dog')
-->RET:Instance('MyDict(_abcoll.MutableMapping)', 'mydict_dog')
+->RET:Instance('MyDict(collections.abc.MutableMapping)', 'mydict_dog')
 <-PYT:mydict_dog.__getitem__('animal')
 ->RET:'cat'

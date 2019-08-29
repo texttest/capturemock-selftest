@@ -1,6 +1,5 @@
 <-PYT:import moduletomock
-<-PYT:moduletomock.getObject('''Some Multiline
-String''')
+<-PYT:moduletomock.getObject('Some Multiline\nString')
 ->RET:Instance('TheClass(TheBaseClass)', 'theclass1')
 <-PYT:theclass1.getNumber()
 ->RET:3
