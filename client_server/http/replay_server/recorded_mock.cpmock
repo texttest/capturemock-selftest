@@ -1,0 +1,9 @@
+<-SRV:POST /capturemock/setServerLocation <address>
+->CLI:POST /strings Here is a string
+<-SRV:200 17
+->CLI:POST /strings Here is a longer string
+<-SRV:200 24
+->CLI:POST /bad/path Don't answer this one
+<-SRV:404 You what?
+->CLI:GET /terminate
+<-SRV:200 Terminating!

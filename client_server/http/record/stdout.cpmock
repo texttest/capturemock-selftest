@@ -1,0 +1,12 @@
+Sending to url http://127.0.0.1:54352/strings
+Sent to server: b'Here is a string'
+Got reply: 16
+Sending to url http://127.0.0.1:54352/strings
+Sent to server: b'Here is a longer string'
+Got reply: 23
+Sending to url http://127.0.0.1:54352/bad/path
+Sent to server: b"Don't answer this one"
+FAILED!  HTTP Error 404: Not Found
+Sending to url http://127.0.0.1:54352/terminate
+Sent to server: None
+Got reply: Terminating!

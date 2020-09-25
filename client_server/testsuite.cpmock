@@ -3,3 +3,6 @@ classic
 
 # Tests for xmlrpc servers
 xmlrpc
+
+# Tests for synchronous http calls
+http
