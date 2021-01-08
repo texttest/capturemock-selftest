@@ -1,4 +1,7 @@
-record
+record_server
+
+# Copy of record_server
+record_client
 
 # Make sure we can replay the clientserver traffic appropriately
 replay_server

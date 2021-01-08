@@ -1,0 +1,9 @@
+8
+9
+17
+First Line
+Extra Line
+New Extra Line
+Caught exception for missing method...
+<Fault 1: '<class \'Exception\'>:method "no_such_method" is not supported'>
+['a_stupidly_long_function_name_to_test_pprinting_in_mock_files', 'add', 'add_newlines', 'pow', 'system.listMethods', 'system.methodHelp', 'system.methodSignature']

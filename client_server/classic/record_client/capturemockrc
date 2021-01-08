@@ -1,0 +1,3 @@
+[general]
+log_config_file = logging
+record_for_client = true

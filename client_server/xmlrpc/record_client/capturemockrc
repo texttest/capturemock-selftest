@@ -1,0 +1,9 @@
+[general]
+server_protocol = xmlrpc
+log_config_file = logging
+alterations = alter_system
+record_for_client = true
+
+[alter_system]
+match_pattern = [89]
+replacement = $answer
