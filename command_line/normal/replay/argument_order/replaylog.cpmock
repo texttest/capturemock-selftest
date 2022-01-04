@@ -1,4 +1,4 @@
-Replay DEBUG - Replay info OrderedDict([('<-CMD:firstcall arg1 arg2', [['->OUT:Forwards\n'], ['->OUT:Forwards again\n']]), ('<-CMD:firstcall arg2 arg1', [['->OUT:Backwards\n']])])
+Replay DEBUG - Replay info OrderedDict([('<-CMD:firstcall arg1 arg2', [['->OUT:Forwards'], ['->OUT:Forwards again']]), ('<-CMD:firstcall arg2 arg1', [['->OUT:Backwards']])])
 Replay DEBUG - Trying to match '<-CMD:firstcall arg1 arg2 arg3'
 Replay DEBUG - Comparing with '<-CMD:firstcall arg1 arg2'
 Replay DEBUG - Words in common 3 vs 0
