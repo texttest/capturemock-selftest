@@ -1,2 +1,4 @@
 # Tests for interception of python modules and attributes
 python_attributes
+
+client_server
