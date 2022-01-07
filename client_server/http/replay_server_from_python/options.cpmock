@@ -1,1 +1,1 @@
-capturemock/test_replay_client.mock capturemock/test.mock capturemockrc
+capturemockrc capturemock/test_replay_client.mock capturemock/test.mock
