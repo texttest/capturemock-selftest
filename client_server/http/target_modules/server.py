@@ -35,7 +35,7 @@ class S(BaseHTTPRequestHandler):
             self._set_response()
             self.wfile.write(str(len(post_data)).encode("utf-8"))
         else:
-            self.send_error(404, "You what?")
+            self.send_error(400, explain="Path must end with strings")
 
 def run(server_class=HTTPServer, handler_class=S, port=0):
     logging.basicConfig(level=logging.INFO)
