@@ -1,3 +1,4 @@
 [general]
 server_protocol = http
 log_config_file = logging
+ignore_http_headers = Server
