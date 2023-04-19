@@ -1,0 +1,50 @@
+[general]
+server_protocol = tcp_header
+log_config_file = logging
+record_for_client = true
+
+[tcp_header]
+format = <3scI
+fields = type,reserved,length
+assume = header_size=8,reserved=F
+
+[DEFAULT]
+hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,MaxChunkCount
+request_format = 2Bq2ISTRI3B
+request_fields = AuthenticationTokenType,AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeIdType,AdditionalHeaderTypeId,AdditionalHeaderEncoding
+response_format = q3ISTR
+response_fields = Timestamp,RequestHandle,ServiceResult,DiagnosticInfoEncoding,DiagnosticStringTable
+appdesc_format = STRSTRBSTRISTRSTRSTR
+appdesc_fields = ApplicationUri,ProductUri,ApplicationEncoding,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls
+
+[HEL]
+format = <5ISTR
+fields = %(hello_fields)s,EndpointUrl
+
+[ACK]
+format = <5I
+fields = %(hello_fields)s
+
+[OPN_header]
+format = <ISTRSTRSTR2I2BH
+fields = SecureChannelId,SecurityPolicyUri,SenderCertificate,ReceiverCertificateThumbprint,SequenceNumber,RequestId,NodeIdType,NodeIdNamespace,subtype
+
+[OPN.446]
+format = <%(request_format)s3ISTRI
+fields = %(request_fields)s,ClientProtocolVersion,SecurityTokenRequestType,SecurityMode,ClientNonce,RequestedLifetime
+
+[OPN.449]
+format = <%(response_format)s3IqISTR
+fields = %(response_fields)s,ServerProtocolVersion,SecurityTokenChannelId,SecurityTokenId,TokenCreatedAt,TokenRevisedLifetime,ServerNonce
+
+[MSG_header]
+format = <4I2BH
+fields = SecureChannelId,TokenId,SequenceNumber,RequestId,NodeIdType,NodeIdNamespace,subtype
+
+[MSG.461]
+format = <%(request_format)s%(appdesc_format)sSTRSTRSTRSTRSTRdI
+fields = %(request_fields)s,%(appdesc_fields)s,ServerUri,EndpointUrl,SessionName,ClientNonce,ClientCertificate,RequestedSessionTimeout,MaxResponseMessageSize
+
+[MSG.464]
+format = <%(response_format)sBHIBHIdSTRSTRISTR%(appdesc_format)sSTRISTRSTRSTRBSTRSTRSTRI
+fields = %(response_fields)s,SessionIdType,SessionIdNamespace,SessionId,AuthenticationTokenType,AuthenticationTokenNamespace,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,ServerEndpointCount,EndpointUrl,%(appdesc_fields)s,ServerCertificate,SecurityMode,SecurityPolicyUri,UserIdentityTokens,TransportProfileUri,SecurityLevel,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
