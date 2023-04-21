@@ -10,12 +10,16 @@ assume = header_size=8,reserved=F
 
 [DEFAULT]
 hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,MaxChunkCount
-request_format = 2Bq2Ii$I3B
-request_fields = AuthenticationTokenType,AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeIdType,AdditionalHeaderTypeId,AdditionalHeaderEncoding
+nodeid = B(B|BH|HI|H)
+variant = B(x|?|b|B|h|H|i|I|q|Q|f|d|i$|128=i[])
+request_format = %(nodeid)sq2Ii$I%(nodeid)sB
+request_fields = AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeId,AdditionalHeaderEncoding
 response_format = q3Ii[i$]
 response_fields = Timestamp,RequestHandle,ServiceResult,DiagnosticInfoEncoding,DiagnosticStringTable
 appdesc_format = i$i$Bi$Ii$i$i[i$]
 appdesc_fields = ApplicationUri,ProductUri,ApplicationEncoding,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls
+header_format = 2I%(nodeid)s
+header_fields = SequenceNumber,RequestId,subtype
 
 [HEL]
 format = <5Ii$
@@ -26,8 +30,8 @@ format = <5I
 fields = %(hello_fields)s
 
 [OPN_header]
-format = <Ii$i$i$2I2BH
-fields = SecureChannelId,SecurityPolicyUri,SenderCertificate,ReceiverCertificateThumbprint,SequenceNumber,RequestId,NodeIdType,NodeIdNamespace,subtype
+format = <Ii$i$i$%(header_format)s
+fields = SecureChannelId,SecurityPolicyUri,SenderCertificate,ReceiverCertificateThumbprint,%(header_fields)s
 
 [OPN.446]
 format = <%(request_format)s3Ii$I
@@ -37,14 +41,54 @@ fields = %(request_fields)s,ClientProtocolVersion,SecurityTokenRequestType,Secur
 format = <%(response_format)s3IqIi$
 fields = %(response_fields)s,ServerProtocolVersion,SecurityTokenChannelId,SecurityTokenId,TokenCreatedAt,TokenRevisedLifetime,ServerNonce
 
+[CLO_header]
+format = <2I%(header_format)s
+fields = SecureChannelId,TokenId,%(header_fields)s
+
+[CLO.452]
+format = <%(request_format)s
+fields = %(request_fields)s
+
 [MSG_header]
-format = <4I2BH
-fields = SecureChannelId,TokenId,SequenceNumber,RequestId,NodeIdType,NodeIdNamespace,subtype
+format = <2I%(header_format)s
+fields = SecureChannelId,TokenId,%(header_fields)s
 
 [MSG.461]
 format = <%(request_format)s%(appdesc_format)si$i$i$i$i$dI
 fields = %(request_fields)s,%(appdesc_fields)s,ServerUri,EndpointUrl,SessionName,ClientNonce,ClientCertificate,RequestedSessionTimeout,MaxResponseMessageSize
 
 [MSG.464]
-format = <%(response_format)sBHIBHIdi$i$i[i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B]i[i$]i$i$I
-fields = %(response_fields)s,SessionIdType,SessionIdNamespace,SessionId,AuthenticationTokenType,AuthenticationTokenNamespace,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,ServerEndpoints,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
+format = <%(response_format)s%(nodeid)s%(nodeid)sdi$i$i[i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B]i[i$]i$i$I
+fields = %(response_fields)s,SessionId,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,ServerEndpoints,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
+
+[MSG.467]
+format = <%(request_format)si$i$i[i$i$]i[i$]%(nodeid)sBi$i$i$
+fields = %(request_fields)s,ClientSignatureAlg,ClientSignature,ClientSoftwareCertificates,LocaleIds,TokenNodeId,TokenEncoding,UserIdentityToken,UserTokenSignatureAlg,UserTokenSignature
+
+[MSG.470]
+format = <%(response_format)si$i[I]i[B]
+fields = %(response_fields)s,ServerNonce,Results,DiagnosticInfos
+
+[MSG.473]
+format = <%(request_format)s?
+fields = %(request_fields)s,DeleteSubscriptions
+
+[MSG.476]
+format = <%(response_format)s
+fields = %(response_fields)s
+
+[MSG.554]
+format = <%(request_format)si[%(nodeid)si[2B2?Hi$]]
+fields = %(request_fields)s,BrowsePaths
+
+[MSG.557]
+format = <%(response_format)si[Ii[BH2I]]i[B]
+fields = %(response_fields)s,Results,DiagnosticInfos
+
+[MSG.712]
+format = <%(request_format)si[%(nodeid)s%(nodeid)si[%(variant)s]]
+fields = %(request_fields)s,MethodsToCall
+
+[MSG.715]
+format = <%(response_format)si[Ii[I]i[B]i[%(variant)s]]i[B]
+fields = %(response_fields)s,Results,DiagnosticInfos
