@@ -1,0 +1,3 @@
+[run_dependent_text]
+recorded_mock:(Timestamp|TokenCreatedAt)': [^,]+{REPLACE <timestamp>}
+recorded_mock:Nonce

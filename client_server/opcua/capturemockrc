@@ -5,7 +5,7 @@ record_for_client = true
 
 [tcp_header]
 format = <3scI
-fields = type,reserved,length
+fields = type,reserved,msg_size
 assume = header_size=8,reserved=F
 
 [DEFAULT]

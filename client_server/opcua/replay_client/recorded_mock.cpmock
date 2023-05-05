@@ -1,0 +1,227 @@
+<-CLI:HEL {}
+{'ProtocolVersion': 0, 'ReceiveBufferSize': 2147483647, 'SendBufferSize': 2147483647, 'MaxMessageSize': 0, 'MaxChunkCount': 0, 'EndpointUrl': b'opc.tcp://127.0.0.1:56144/freeopcua/server/'}
+->SRV:ACK {}
+{'ProtocolVersion': 0, 'ReceiveBufferSize': 2147483647, 'SendBufferSize': 2147483647, 'MaxMessageSize': 0, 'MaxChunkCount': 0}
+<-CLI:OPN {'SecureChannelId': 0, 'SecurityPolicyUri': b'http://opcfoundation.org/UA/SecurityPolicy#None', 'SequenceNumber': 1, 'RequestId': 1, 'subtype': (1, (0, 446))}
+{'AuthenticationToken': (0, 0),
+ 'Timestamp': 133265652247223590,
+ 'RequestHandle': 1,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'ClientProtocolVersion': 0,
+ 'SecurityTokenRequestType': 0,
+ 'SecurityMode': 1,
+ 'ClientNonce': b'',
+ 'RequestedLifetime': 3600000}
+->SRV:OPN {'SecureChannelId': 6, 'SecurityPolicyUri': b'http://opcfoundation.org/UA/SecurityPolicy#None', 'SequenceNumber': 1, 'RequestId': 1, 'subtype': (1, (0, 449))}
+{'Timestamp': 133265652252499290,
+ 'RequestHandle': 1,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'ServerProtocolVersion': 0,
+ 'SecurityTokenChannelId': 6,
+ 'SecurityTokenId': 13,
+ 'TokenCreatedAt': 133265652252499290,
+ 'TokenRevisedLifetime': 3600000,
+ 'ServerNonce': b''}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 2, 'RequestId': 2, 'subtype': (1, (0, 461))}
+{'AuthenticationToken': (0, 0),
+ 'Timestamp': 133265652252569560,
+ 'RequestHandle': 2,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'ApplicationUri': b'urn:freeopcua:client',
+ 'ProductUri': b'urn:freeopcua.github.io:client',
+ 'ApplicationEncoding': 2,
+ 'ApplicationName': b'Pure Python Client',
+ 'ApplicationType': 1,
+ 'DiscoveryUrls': [],
+ 'EndpointUrl': b'opc.tcp://127.0.0.1:56144/freeopcua/server/',
+ 'SessionName': b'Pure Python Client Session1',
+ 'ClientNonce': b'\x19n),\xe8`\x02\xb8\x90\xa4\xceR\xc3\x08\tf\x83\x15\x8f\xb8!\xd7o\xf6\x02\xc1~\xe1A\x82J,',
+ 'RequestedSessionTimeout': 3600000.0,
+ 'MaxResponseMessageSize': 0}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 2, 'RequestId': 2, 'subtype': (1, (0, 464))}
+{'Timestamp': 133265652257825500,
+ 'RequestHandle': 2,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'SessionId': (2, (0, 11)),
+ 'AuthenticationToken': (2, (0, 1001)),
+ 'RevisedSessionTimeout': 3600000.0,
+ 'ServerNonce': b'N[\x1f\xa0x\x12c%\x1f\xe1\x00K\xcc\x9e}\x14\xcf[!\x12\xa3;A\xb2b\x1eh6C\xc3\\\xc9',
+ 'ServerEndpoints': [(b'opc.tcp://127.0.0.1:56147/freeopcua/server/',
+                      b'urn:freeopcua:python:server',
+                      b'urn:freeopcua.github.io:python:server',
+                      2,
+                      b'FreeOpcUa Example Server',
+                      2,
+                      None,
+                      None,
+                      [b'opc.tcp://0.0.0.0:0/freeopcua/server/'],
+                      None,
+                      1,
+                      b'http://opcfoundation.org/UA/SecurityPolicy#None',
+                      [(b'anonymous', 0, None, None, None), (b'certificate_basic256sha256', 2, None, None, None), (b'username', 1, None, None, None)],
+                      b'http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary',
+                      0)],
+ 'ServerSoftwareCertificates': [],
+ 'ServerSignatureAlgorithm': b'',
+ 'ServerSignatureData': b'',
+ 'MaxRequestMessageSize': 65536}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 3, 'RequestId': 3, 'subtype': (1, (0, 467))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652257992710,
+ 'RequestHandle': 3,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'ClientSignatureAlg': b'http://www.w3.org/2000/09/xmldsig#rsa-sha1',
+ 'ClientSignature': b'',
+ 'ClientSoftwareCertificates': [],
+ 'LocaleIds': [b'en'],
+ 'TokenNodeId': (1, (0, 321)),
+ 'TokenEncoding': 1,
+ 'UserIdentityToken': b'\t\x00\x00\x00anonymous'}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 3, 'RequestId': 3, 'subtype': (1, (0, 470))}
+{'Timestamp': 133265652263155760,
+ 'RequestHandle': 3,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'ServerNonce': b'?\x07\t\x1d`?}c\xd9/\xc6\xde~\xc7\xa7\n\x0e\xda\x9dr\xf9\xd2]\xf6\xa8\x80\xe5F\xdcj\xc1j',
+ 'Results': [],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 4, 'RequestId': 4, 'subtype': (1, (0, 554))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652263195750,
+ 'RequestHandle': 4,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'BrowsePaths': [((0, 85), [(0, 33, False, True, 0, b'Hellower')])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 4, 'RequestId': 4, 'subtype': (1, (0, 557))}
+{'Timestamp': 133265652268383820,
+ 'RequestHandle': 4,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'Results': [(0, [(2, 0, 20001, 4294967295)])],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 5, 'RequestId': 5, 'subtype': (1, (0, 554))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652268473260,
+ 'RequestHandle': 5,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'BrowsePaths': [((2, (0, 20001)), [(0, 33, False, True, 0, b'SayHello')])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 5, 'RequestId': 5, 'subtype': (1, (0, 557))}
+{'Timestamp': 133265652273600540,
+ 'RequestHandle': 5,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'Results': [(0, [(2, 0, 20002, 4294967295)])],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 6, 'RequestId': 6, 'subtype': (1, (0, 712))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652273640530,
+ 'RequestHandle': 6,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'MethodsToCall': [((2, (0, 20001)), (2, (0, 20002)), [(1, False)])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 6, 'RequestId': 6, 'subtype': (1, (0, 715))}
+{'Timestamp': 133265652278981380,
+ 'RequestHandle': 6,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'Results': [(0, [0], [], [(12, b"I'm not happy")])],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 7, 'RequestId': 7, 'subtype': (1, (0, 554))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652279051370,
+ 'RequestHandle': 7,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'BrowsePaths': [((2, (0, 20001)), [(0, 33, False, True, 1, b'SayHello2')])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 7, 'RequestId': 7, 'subtype': (1, (0, 557))}
+{'Timestamp': 133265652284236230, 'RequestHandle': 7, 'ServiceResult': 0, 'DiagnosticInfoEncoding': 0, 'DiagnosticStringTable': [], 'Results': [(0, [(2, 1, 2001, 4294967295)])], 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 8, 'RequestId': 8, 'subtype': (1, (0, 712))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652284266210,
+ 'RequestHandle': 8,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'MethodsToCall': [((2, (0, 20001)), (2, (1, 2001)), [(1, True)])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 8, 'RequestId': 8, 'subtype': (1, (0, 715))}
+{'Timestamp': 133265652289370070,
+ 'RequestHandle': 8,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'Results': [(0, [0], [], [(12, b"I'm happy")])],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 9, 'RequestId': 9, 'subtype': (1, (0, 554))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652289410410,
+ 'RequestHandle': 9,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'BrowsePaths': [((2, (0, 20001)), [(0, 33, False, True, 1, b'SayHelloArray')])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 9, 'RequestId': 9, 'subtype': (1, (0, 557))}
+{'Timestamp': 133265652294541910, 'RequestHandle': 9, 'ServiceResult': 0, 'DiagnosticInfoEncoding': 0, 'DiagnosticStringTable': [], 'Results': [(0, [(2, 1, 2004, 4294967295)])], 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 10, 'RequestId': 10, 'subtype': (1, (0, 712))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652294571950,
+ 'RequestHandle': 10,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'MethodsToCall': [((2, (0, 20001)), (2, (1, 2004)), [(1, False)])]}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 10, 'RequestId': 10, 'subtype': (1, (0, 715))}
+{'Timestamp': 133265652299736520,
+ 'RequestHandle': 10,
+ 'ServiceResult': 0,
+ 'DiagnosticInfoEncoding': 0,
+ 'DiagnosticStringTable': [],
+ 'Results': [(0, [0], [], [(140, [b"I'm not happy", b'Actually I am'])])],
+ 'DiagnosticInfos': []}
+<-CLI:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 11, 'RequestId': 11, 'subtype': (1, (0, 473))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652299776530,
+ 'RequestHandle': 11,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0,
+ 'DeleteSubscriptions': True}
+->SRV:MSG {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 11, 'RequestId': 11, 'subtype': (1, (0, 476))}
+{'Timestamp': 133265652304890830, 'RequestHandle': 11, 'ServiceResult': 0, 'DiagnosticInfoEncoding': 0, 'DiagnosticStringTable': []}
+<-CLI:CLO {'SecureChannelId': 6, 'TokenId': 13, 'SequenceNumber': 12, 'RequestId': 12, 'subtype': (1, (0, 452))}
+{'AuthenticationToken': (2, (0, 1001)),
+ 'Timestamp': 133265652304920820,
+ 'RequestHandle': 12,
+ 'ReturnDiagnostics': 0,
+ 'TimeoutHint': 1000,
+ 'AdditionalHeaderTypeId': (0, 0),
+ 'AdditionalHeaderEncoding': 0}
