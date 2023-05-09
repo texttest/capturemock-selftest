@@ -23,9 +23,14 @@ if __name__ == '__main__':
         print("Root node is: ", root)
         objects = client.get_objects_node()
         print("Objects node is: ", objects)
+        endpoints = client.get_endpoints()
+        print("There are", len(endpoints), "endpoints")
 
         hellower = objects.get_child("0:Hellower")
         print("Hellower is: ", hellower)
+
+        values = client.get_values([ hellower ])
+        print("Hellower values are", values)
 
         resulting_text = hellower.call_method("0:SayHello", False)
         print(resulting_text)

@@ -10,14 +10,17 @@ assume = header_size=8,reserved=F
 
 [DEFAULT]
 hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,MaxChunkCount
-nodeid = B(B|BH|HI|H)
-variant = B(x|?|b|B|h|H|i|I|q|Q|f|d|i$|128=i[])
+nodeid = B(B|BH|HI|Hi$|HI2H8s|Hi$)
+variant = B(|?|b|B|h|H|i|I|q|Q|f|d|i$|128=i[])
+datavalue = B(1=%(variant)s|2=I|4=q|8=q|16=H|32=H)
+localetext = B(1=i$|2=i$)
 request_format = %(nodeid)sq2Ii$I%(nodeid)sB
 request_fields = AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeId,AdditionalHeaderEncoding
 response_format = q3Ii[i$]
 response_fields = Timestamp,RequestHandle,ServiceResult,DiagnosticInfoEncoding,DiagnosticStringTable
-appdesc_format = i$i$Bi$Ii$i$i[i$]
-appdesc_fields = ApplicationUri,ProductUri,ApplicationEncoding,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls
+appdesc_format = i$i$%(localetext)sIi$i$i[i$]
+appdesc_fields = ApplicationUri,ProductUri,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls
+endpoint_format = i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B
 header_format = 2I%(nodeid)s
 header_fields = SequenceNumber,RequestId,subtype
 
@@ -53,12 +56,20 @@ fields = %(request_fields)s
 format = <2I%(header_format)s
 fields = SecureChannelId,TokenId,%(header_fields)s
 
+[MSG.428]
+format = <%(request_format)si$i[i$]i[i$]
+fields = %(request_fields)s,EndpointUrl,LocaleIds,ProfileUris
+
+[MSG.431]
+format = <%(response_format)si[%(endpoint_format)s]
+fields = %(response_fields)s,Endpoints
+
 [MSG.461]
 format = <%(request_format)s%(appdesc_format)si$i$i$i$i$dI
 fields = %(request_fields)s,%(appdesc_fields)s,ServerUri,EndpointUrl,SessionName,ClientNonce,ClientCertificate,RequestedSessionTimeout,MaxResponseMessageSize
 
 [MSG.464]
-format = <%(response_format)s%(nodeid)s%(nodeid)sdi$i$i[i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B]i[i$]i$i$I
+format = <%(response_format)s%(nodeid)s%(nodeid)sdi$i$i[%(endpoint_format)s]i[i$]i$i$I
 fields = %(response_fields)s,SessionId,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,ServerEndpoints,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
 
 [MSG.467]
@@ -83,6 +94,14 @@ fields = %(request_fields)s,BrowsePaths
 
 [MSG.557]
 format = <%(response_format)si[Ii[BH2I]]i[B]
+fields = %(response_fields)s,Results,DiagnosticInfos
+
+[MSG.631]
+format = <%(request_format)sdIi[%(nodeid)sIi$Hi$]
+fields = %(request_fields)s,MaxAge,TimestampsToReturn,NodesToRead
+
+[MSG.634]
+format = <%(response_format)si[%(datavalue)s]i[B]
 fields = %(response_fields)s,Results,DiagnosticInfos
 
 [MSG.712]
