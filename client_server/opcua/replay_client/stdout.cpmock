@@ -3,6 +3,8 @@ Objects node is:  i=85
 There are 1 endpoints
 Hellower is:  i=20001
 Hellower values are [None]
+myvar value is:  6.7
+myvar value set, is now:  3.9
 I'm not happy
 I'm happy
 ["I'm not happy", 'Actually I am']

@@ -104,6 +104,14 @@ fields = %(request_fields)s,MaxAge,TimestampsToReturn,NodesToRead
 format = <%(response_format)si[%(datavalue)s]i[B]
 fields = %(response_fields)s,Results,DiagnosticInfos
 
+[MSG.673]
+format = <%(request_format)si[%(nodeid)sIi$%(datavalue)s]
+fields = %(request_fields)s,NodesToWrite
+
+[MSG.676]
+format = <%(response_format)si[I]i[B]
+fields = %(response_fields)s,Results,DiagnosticInfos
+
 [MSG.712]
 format = <%(request_format)si[%(nodeid)s%(nodeid)si[%(variant)s]]
 fields = %(request_fields)s,MethodsToCall

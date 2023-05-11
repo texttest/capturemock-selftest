@@ -32,6 +32,13 @@ if __name__ == '__main__':
         values = client.get_values([ hellower ])
         print("Hellower values are", values)
 
+        myvar = root.get_child(["0:Objects", "2:MyObject", "2:MyVariable"])
+        value = myvar.get_value()
+        print("myvar value is: ", value)
+        myvar.set_value(3.9)
+        value = myvar.get_value()
+        print("myvar value set, is now: ", value)
+        
         resulting_text = hellower.call_method("0:SayHello", False)
         print(resulting_text)
 

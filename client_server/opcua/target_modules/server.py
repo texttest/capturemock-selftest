@@ -56,6 +56,14 @@ class HelloServer:
 
         hellower.add_method(
             freeopcua_namespace, "SayHelloArray", say_hello_array, [ua.VariantType.Boolean], [ua.VariantType.String])
+        
+        # setup our own namespace, not really necessary but should as spec
+        uri = "http://examples.freeopcua.github.io"
+        idx = self.server.register_namespace(uri)
+        
+        myobj = objects.add_object(idx, "MyObject")
+        myvar = myobj.add_variable(idx, "MyVariable", 6.7)
+        myvar.set_writable()    # Set MyVariable to be writable by clients
 
     def start(self):
         self.server.start()
