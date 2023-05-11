@@ -6,7 +6,7 @@ record_for_client = true
 [tcp_header]
 format = <3scI
 fields = type,reserved,msg_size
-assume = header_size=8,reserved=F
+assume = reserved=F
 
 [DEFAULT]
 hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,MaxChunkCount

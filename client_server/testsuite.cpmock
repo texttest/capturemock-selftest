@@ -6,3 +6,6 @@ xmlrpc
 
 # Tests for synchronous http calls
 http
+
+# Tests for opc ua example
+opcua

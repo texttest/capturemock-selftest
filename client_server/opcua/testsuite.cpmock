@@ -1,0 +1,5 @@
+# Copy of record_server
+record_client
+
+# Lack of server contact at the start should mean CaptureMock taking on the role of server itself
+replay_client
