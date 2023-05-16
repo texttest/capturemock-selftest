@@ -70,7 +70,7 @@ fields = %(request_fields)s,%(appdesc_fields)s,ServerUri,EndpointUrl,SessionName
 
 [MSG.464]
 format = <%(response_format)s%(nodeid)s%(nodeid)sdi$i$i[%(endpoint_format)s]i[i$]i$i$I
-fields = %(response_fields)s,SessionId,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,ServerEndpoints,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
+fields = %(response_fields)s,SessionId,AuthenticationToken,RevisedSessionTimeout,ServerNonce,ServerCertificate,Endpoints,ServerSoftwareCertificates,ServerSignatureAlgorithm,ServerSignatureData,MaxRequestMessageSize
 
 [MSG.467]
 format = <%(request_format)si$i$i[i$i$]i[i$]%(nodeid)sBi$i$i$
@@ -119,3 +119,9 @@ fields = %(request_fields)s,MethodsToCall
 [MSG.715]
 format = <%(response_format)si[Ii[I]i[B]i[%(variant)s]]i[B]
 fields = %(response_fields)s,Results,DiagnosticInfos
+
+[list_elements]
+NodesToRead = NodeId,AttributeId,IndexRange,Namespace,DataEncoding
+NodesToWrite = NodeId,AttributeId,IndexRange,Value
+Endpoints = Url,ApplicationUri,ProductUri,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls,ServerCertificate,SecurityMode,SecurityPolicyUri,UserIdentityTokens,TransportProfileUri,SecurityLevel
+UserIdentityTokens = PolicyId,TokenType,IssuedTokenType,IssuerEndpointUrl,SecurityPolicyUri
