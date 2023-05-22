@@ -125,3 +125,7 @@ NodesToRead = NodeId,AttributeId,IndexRange,Namespace,DataEncoding
 NodesToWrite = NodeId,AttributeId,IndexRange,Value
 Endpoints = Url,ApplicationUri,ProductUri,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls,ServerCertificate,SecurityMode,SecurityPolicyUri,UserIdentityTokens,TransportProfileUri,SecurityLevel
 UserIdentityTokens = PolicyId,TokenType,IssuedTokenType,IssuerEndpointUrl,SecurityPolicyUri
+
+[enums]
+ApplicationType = Server,Client,ClientAndServer,DiscoveryServer
+SecurityTokenRequestType = Issue,Renew
