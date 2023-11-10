@@ -13,11 +13,12 @@ hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,M
 nodeid = B(B|BH|HI|Hi$|HI2H8s|Hi$)
 variant = B(|?|b|B|h|H|i|I|q|Q|f|d|i$|128=i[])
 datavalue = B(1=%(variant)s|2=I|4=q|8=q|16=H|32=H)
-localetext = B(1=i$|2=i$)
-request_format = %(nodeid)sq2Ii$I%(nodeid)sB
-request_fields = AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeId,AdditionalHeaderEncoding
-response_format = q3Ii[i$]
-response_fields = Timestamp,RequestHandle,ServiceResult,DiagnosticInfoEncoding,DiagnosticStringTable
+diagnosticinfo = B(|1=I|2=I|4=I|8=I|16=i$|32=I|64=B)
+localetext = B(|1=i$|2=i$)
+request_format = %(nodeid)sq2Ii$I%(nodeid)s%(localetext)s
+request_fields = AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeId,AdditionalHeader
+response_format = q2I%(diagnosticinfo)si[i$]%(nodeid)s%(localetext)s
+response_fields = Timestamp,RequestHandle,ServiceResult,ServiceDiagnostics,DiagnosticStringTable,AdditionalHeaderTypeId,AdditionalHeader
 appdesc_format = i$i$%(localetext)sIi$i$i[i$]
 appdesc_fields = ApplicationUri,ProductUri,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls
 endpoint_format = i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B
@@ -31,6 +32,10 @@ fields = %(hello_fields)s,EndpointUrl
 [ACK]
 format = <5I
 fields = %(hello_fields)s
+
+[ERR]
+format = <Ii$
+fields = Error,Reason
 
 [OPN_header]
 format = <Ii$i$i$%(header_format)s
@@ -120,11 +125,47 @@ fields = %(request_fields)s,MethodsToCall
 format = <%(response_format)si[Ii[I]i[B]i[%(variant)s]]i[B]
 fields = %(response_fields)s,Results,DiagnosticInfos
 
+[MSG.751]
+format = <%(request_format)s2Ii[%(nodeid)sIi$Hi$2Id%(nodeid)sBI?]
+fields = %(request_fields)s,SubscriptionId,TimestampsToReturn,ItemsToCreate
+
+[MSG.754]
+format = <%(response_format)si[2IdI%(nodeid)sB]i[B]
+fields = %(response_fields)s,MonitoredResults,DiagnosticInfos
+
+[MSG.787]
+format = <%(request_format)sd3I?B
+fields = %(request_fields)s,RequestedPublishingInterval,RequestedLifetimeCount,RequestedMaxKeepAliveCount,MaxNotificationsPerPublish,PublishingEnabled,Priority
+
+[MSG.790]
+format = <%(response_format)sId2I
+fields = %(response_fields)s,SubscriptionId,RevisedPublishingInterval,RevisedLifetimeCount,RevisedMaxKeepAliveCount
+
+[MSG.793]
+format = <%(request_format)sId3IB
+fields = %(request_fields)s,SubscriptionId,RequestedPublishingInterval,RequestedLifetimeCount,RequestedMaxKeepAliveCount,MaxNotificationsPerPublish,Priority
+
+[MSG.796]
+format = <%(response_format)sd2I
+fields = %(response_fields)s,RevisedPublishingInterval,RevisedLifetimeCount,RevisedMaxKeepAliveCount
+
+[MSG.826]
+format = <%(request_format)si[2I]
+fields = %(request_fields)s,SubscriptionAcknowledgements
+
+[MSG.829]
+format = <%(response_format)sIi[I]?Iqi[%(nodeid)sBii[I%(datavalue)s]i[B]]i[I]i[B]
+fields = %(response_fields)s,SubscriptionId,AvailableSequenceNumbers,MoreNotifications,SequenceNumber,PublishTime,NotificationData,Results,DiagnosticInfos
+
 [list_elements]
 NodesToRead = NodeId,AttributeId,IndexRange,Namespace,DataEncoding
 NodesToWrite = NodeId,AttributeId,IndexRange,Value
 Endpoints = Url,ApplicationUri,ProductUri,ApplicationName,ApplicationType,GatewayServerUri,DiscoveryProfileUri,DiscoveryUrls,ServerCertificate,SecurityMode,SecurityPolicyUri,UserIdentityTokens,TransportProfileUri,SecurityLevel
 UserIdentityTokens = PolicyId,TokenType,IssuedTokenType,IssuerEndpointUrl,SecurityPolicyUri
+SubscriptionAcknowledgements = SubscriptionId,SequenceNumber
+ItemsToCreate = NodeId,AttributeId,IndexRange,Namespace,DataEncoding,MonitoringMode,ClientHandle,SamplingInterval,FilterTypeId,FilterEncoding,QueueSize,DiscardOldest
+MonitoredResults = StatusCode,MonitoredItemId,RevisedSamplingInterval,RevisedQueueSize,FilterResultTypeId,FilterResultEncoding
+NotificationData = NodeId,Encoding,DataLength,MonitoredItems,DiagnosticInfos
 
 [enums]
 ApplicationType = Server,Client,ClientAndServer,DiscoveryServer
