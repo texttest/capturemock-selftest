@@ -10,11 +10,11 @@ assume = reserved=F
 
 [DEFAULT]
 hello_fields = ProtocolVersion,ReceiveBufferSize,SendBufferSize,MaxMessageSize,MaxChunkCount
-nodeid = B(B|BH|HI|Hi$|HI2H8s|Hi$)
-variant = B(|?|b|B|h|H|i|I|q|Q|f|d|i$|128=i[])
+localetext = B(|1=i$|2=i$)
+nodeid = B(B|BH|HI|Hi$|HI2H8s|Hi$|64=I|128=i$)
+variant = B(|?|b|B|h|H|i|I|q|Q|f|d|i$|q|BH|i$|i$|%(nodeid)s|%(nodeid)s|I|Hi$|%(localetext)s|128=i[])
 datavalue = B(1=%(variant)s|2=I|4=q|8=q|16=H|32=H)
 diagnosticinfo = B(|1=I|2=I|4=I|8=I|16=i$|32=I|64=B)
-localetext = B(|1=i$|2=i$)
 request_format = %(nodeid)sq2Ii$I%(nodeid)s%(localetext)s
 request_fields = AuthenticationToken,Timestamp,RequestHandle,ReturnDiagnostics,AuditEntryId,TimeoutHint,AdditionalHeaderTypeId,AdditionalHeader
 response_format = q2I%(diagnosticinfo)si[i$]%(nodeid)s%(localetext)s
@@ -24,6 +24,9 @@ appdesc_fields = ApplicationUri,ProductUri,ApplicationName,ApplicationType,Gatew
 endpoint_format = i$%(appdesc_format)si$Ii$i[i$Ii$i$i$]i$B
 header_format = 2I%(nodeid)s
 header_fields = SequenceNumber,RequestId,subtype
+browse_description = %(nodeid)sI%(nodeid)s?2I
+reference_description = %(nodeid)s?%(nodeid)sHi$%(localetext)sI%(nodeid)s
+browse_result = Ii$i[%(reference_description)s]
 
 [HEL]
 format = <5Ii$
@@ -92,6 +95,14 @@ fields = %(request_fields)s,DeleteSubscriptions
 [MSG.476]
 format = <%(response_format)s
 fields = %(response_fields)s
+
+[MSG.527]
+format = <%(request_format)s%(nodeid)sq2Ii[%(browse_description)s]
+fields = %(request_fields)s,ViewId,Timestamp,ViewVersion,RequestedMaxReferencesPerNode,NodesToBrowse
+
+[MSG.530]
+format = <%(response_format)si[%(browse_result)s]i[%(diagnosticinfo)s]
+fields = %(response_fields)s,BrowseResults,DiagnosticInfos
 
 [MSG.554]
 format = <%(request_format)si[%(nodeid)si[2B2?Hi$]]
@@ -166,7 +177,11 @@ SubscriptionAcknowledgements = SubscriptionId,SequenceNumber
 ItemsToCreate = NodeId,AttributeId,IndexRange,Namespace,DataEncoding,MonitoringMode,ClientHandle,SamplingInterval,FilterTypeId,FilterEncoding,QueueSize,DiscardOldest
 MonitoredResults = StatusCode,MonitoredItemId,RevisedSamplingInterval,RevisedQueueSize,FilterResultTypeId,FilterResultEncoding
 NotificationData = NodeId,Encoding,DataLength,MonitoredItems,DiagnosticInfos
+NodesToBrowse = NodeId,BrowseDirection,ReferenceTypeId,IncludeSubtypes,NodeClassMask,ResultMask
+BrowseResults = StatusCode,ContinuationPoint,BrowseReferences
+BrowseReferences = ReferenceTypeId,IsForward,NodeId,BrowseName,DisplayName,NodeClass,TypeDefinition
 
 [enums]
 ApplicationType = Server,Client,ClientAndServer,DiscoveryServer
 SecurityTokenRequestType = Issue,Renew
+BrowseDirection = Forward,Inverse,Both,Invalid
