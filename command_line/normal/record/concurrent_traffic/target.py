@@ -4,9 +4,9 @@ import os, time
 from threading import Thread
 
 def run():
-    os.system("dosleep 2")
+    os.system("dosleep 3")
 
 x = Thread(target=run)
 x.start()
-time.sleep(0.5)
-os.system("dosleep 0.5")
+time.sleep(1)
+os.system("dosleep 1")

@@ -1,4 +1,8 @@
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:moduletomock.addCallbacks('argument', Callback('moduletomock_argument_callback'), Callback('moduletomock_argument_callback1'))
 <-PYT:moduletomock.addCallbacks('argument', moduletomock_argument_callback, moduletomock_argument_callback1)
 <-PYT:moduletomock.doStuffWithCallback()

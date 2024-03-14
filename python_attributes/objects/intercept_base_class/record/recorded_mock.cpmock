@@ -1,4 +1,8 @@
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:moduletomock.MyObject('My Value')
 ->RET:Instance('MyObject(Base)', 'myobject_my_value')
 <-PYT:myobject_my_value.doNothing()

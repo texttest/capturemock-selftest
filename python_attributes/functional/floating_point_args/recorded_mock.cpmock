@@ -1,3 +1,7 @@
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:moduletomock.call_function(3.33)
 ->RET:'REAL_RETURN'

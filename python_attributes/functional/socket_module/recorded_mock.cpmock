@@ -1,3 +1,7 @@
 <-PYT:import socket
+<-PYT:socket.__name__
+->RET:'socket'
+<-PYT:socket.__path__
+->RET:raise AttributeError("module 'socket' has no attribute '__path__'")
 <-PYT:socket.gethostname()
-->RET:'sofa-pc'
+->RET:'SE-R90THDWB'

@@ -1,4 +1,8 @@
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:import no_such_module
 ->RET:raise ModuleNotFoundError("No module named 'no_such_module'")
 <-PYT:moduletomock.no_such_method
@@ -6,17 +10,21 @@
 <-PYT:moduletomock.call_function('argument', faking=True)
 ->RET:raise TypeError("call_function() got an unexpected keyword argument 'faking'")
 <-PYT:import fakeurllib
+<-PYT:fakeurllib.__name__
+->RET:raise AttributeError("'NoneType' object has no attribute '__name__'")
 <-PYT:fakeurllib.urlopen('foo://no.such.site')
 ->RET:raise Instance('URLError(IOError)', 'urlerror1')
 <-PYT:urlerror1.args
 ->RET:('No such site, you wally!',)
 <-PYT:fakeurllib.urlopen('foo://another.no.such.site')
 ->RET:raise Instance('URLError', 'urlerror2')
-<-PYT:urlerror2.__bool__()
-->RET:False
-<-PYT:urlerror2.__bool__()
-->RET:False
-<-PYT:urlerror2.__bool__()
-->RET:False
 <-PYT:urlerror2.__str__()
 ->RET:"<urlopen error (-2, 'Now you're really getting on my nerves!')>"
+<-PYT:urlerror2.__suppress_context__
+->RET:False
+<-PYT:urlerror2.__bool__()
+->RET:False
+<-PYT:urlerror2.__bool__()
+->RET:False
+<-PYT:urlerror2.__bool__()
+->RET:False

@@ -1,3 +1,7 @@
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:moduletomock.get_dates()
 ->RET:{'finished': datetime.date(2010, 4, 24), 'started': datetime.date(2010, 4, 14)}

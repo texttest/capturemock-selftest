@@ -7,3 +7,5 @@
 ->RET:raise Instance('URLError', 'urlerror2')
 <-PYT:urlerror2.__str__()
 ->RET:"<urlopen error (-2, 'Now you're really getting on my nerves!')>"
+<-PYT:urlerror2.__suppress_context__
+->RET:False

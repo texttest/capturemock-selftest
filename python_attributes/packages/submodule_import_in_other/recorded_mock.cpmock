@@ -1,5 +1,13 @@
 <-PYT:import packagetomock
+<-PYT:packagetomock.__name__
+->RET:'packagetomock'
+<-PYT:packagetomock.__path__
+->RET:['Fake value just to mark that it exists']
 <-PYT:import moduletomock
+<-PYT:moduletomock.__name__
+->RET:'moduletomock'
+<-PYT:moduletomock.__path__
+->RET:raise AttributeError("module 'moduletomock' has no attribute '__path__'")
 <-PYT:packagetomock.mymodule.MyObject()
 ->RET:Instance('MyObject', 'myobject1')
 <-PYT:myobject1.getValue()
