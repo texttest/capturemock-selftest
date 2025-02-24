@@ -1,0 +1,2 @@
+WARNING: Ignoring requested intercept of command 'c:/some/absolute/path'.
+CaptureMock intercepts commands via PATH and cannot do anything with absolute paths.
