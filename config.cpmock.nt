@@ -1,5 +1,4 @@
-
-interpreter:python
+executable:${TEXTTEST_CHECKOUT}/Scripts/capturemock.exe
 
 [run_dependent_text]
 recorded_mock:\\{REPLACE /}

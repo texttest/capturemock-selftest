@@ -1,2 +1,4 @@
 # Because windows copies stuff and creates pyc files
 test_data_ignore:packagetomock
+
+interpreter:$TEXTTEST_CHECKOUT/Scripts/python.exe
