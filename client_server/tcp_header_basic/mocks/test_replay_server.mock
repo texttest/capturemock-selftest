@@ -1,0 +1,9 @@
+<-SRV:Started string-length server at 127.0.0.1:59019
+<-SRV:Nice day today!
+->CLI:Here is a string
+<-SRV:Length was 16
+->CLI:Here is a longer string
+<-SRV:Length was 23
+->CLI:Don't answer this one
+->CLI:terminate
+<-SRV:Exiting...

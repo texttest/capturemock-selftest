@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
+import sys
 from capturemock import capturemock
 
 @capturemock(rcFiles=["capturemockrc"])
 def test():
     import os, subprocess
 
-    subprocess.call([ "python", "subproc.py" ])
+    subprocess.call([ sys.executable, "subproc.py" ])
 
 try:
     test()

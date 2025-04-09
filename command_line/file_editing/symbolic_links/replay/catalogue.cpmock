@@ -1,6 +1,6 @@
 The following new files/directories were created:
 <Test Directory>
-----capturemock
+----mocks
 --------test.mock
 ----writedir
 --------deadlink

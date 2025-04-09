@@ -24,7 +24,7 @@ link_test_path:target_modules
 # Also used by custom client via command line
 link_test_path:moduletomock.py
 link_test_path:capturemockrc
-copy_test_path:capturemock
+copy_test_path:mocks
 
 test_data_ignore:__pycache__
 
@@ -37,6 +37,6 @@ kill_timeout:300
 full_name:CaptureMock
 
 [collate_file]
-recorded_mock*:capturemock/test*.mock
-replay_fail:capturemock/*.mock.tmp
+recorded_mock*:mocks/test*.mock
+replay_fail:mocks/*.mock.tmp
 replay_partial:tmp*

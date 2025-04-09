@@ -1,0 +1,22 @@
+<-SRV:POST /capturemock/setServerLocation <address>
+->CLI:POST /strings Here is a string
+<-SRV:200 16
+->CLI:POST /strings Here is a longer string
+<-SRV:200 23
+->CLI:POST /bad/path Don't answer this one
+<-SRV:400 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <title>Error response</title>
+    </head>
+    <body>
+        <h1>Error response</h1>
+        <p>Error code: 400</p>
+        <p>Message: Bad Request.</p>
+        <p>Error code explanation: 400 - Path must end with strings.</p>
+    </body>
+</html>
+->CLI:GET /terminate
+<-SRV:200 Terminating!

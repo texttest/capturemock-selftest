@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import sys
 from capturemock import capturemock
 
 @capturemock(rcFiles=["capturemockrc"])
@@ -10,7 +11,7 @@ def test():
     print(moduletomock.call_function() + " " + moduletomock.attribute)
     sys.stdout.flush()
 
-    subprocess.call([ "python", "subproc.py" ])
+    subprocess.call([ sys.executable, "subproc.py" ])
 
 try:
     test()

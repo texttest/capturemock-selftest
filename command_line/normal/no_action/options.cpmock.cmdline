@@ -1,1 +1,1 @@
-{CLEAR -r capturemock/test.mock}
+{CLEAR -r mocks/test.mock}

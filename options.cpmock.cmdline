@@ -1,1 +1,2 @@
--R capturemockrc -r capturemock/test.mock python target.py
+-R capturemockrc -r mocks/test.mock python target.py
+

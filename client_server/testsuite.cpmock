@@ -4,6 +4,9 @@ classic
 # Tests for xmlrpc servers
 xmlrpc
 
+# Tests for the "tcp_header" set up, where each request is a string preceded by a length integer
+tcp_header_basic
+
 # Tests for synchronous http calls
 http
 

@@ -1,1 +1,1 @@
--p capturemock/test_replay.mock -f capturemock/test_replay.files
+-p mocks/test_replay.mock -f mocks/test_replay.files
