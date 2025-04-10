@@ -1,0 +1,25 @@
+[general]
+server_protocol = tcp_header
+record_for_client = true
+# 0.5 is default, but that's too slow for the timeouts in the target modules
+header_timeout = 0.1
+
+[tcp_header]
+format = >2I
+fields = msg_size,type
+
+[1_header]
+format = >I
+fields = subtype
+
+[1.1]
+format = >I
+fields = precipitation
+
+[1.2]
+format = >I
+fields = temperature
+
+[enums]
+precipitation = none,rain,snow
+temperature = cold,moderate,hot
