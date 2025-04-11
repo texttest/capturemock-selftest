@@ -1,0 +1,17 @@
+<-CLI:USER user
+->SRV:331 Username ok, send password.
+<-CLI:PASS 12345
+->SRV:230 Login successful.
+<-CLI:TYPE A
+->SRV:200 Type set to: ASCII.
+<-CLI:EPSV
+->SRV:229 Entering extended passive mode (|||54673|).
+<-CLI:LIST
+->LST:['-rw-rw-rw-   1 owner    group          10 Apr 11 15:00 README.txt']
+->SRV:226 Transfer complete.
+<-CLI:TYPE A
+->SRV:200 Type set to: ASCII.
+<-CLI:EPSV
+->SRV:229 Entering extended passive mode (|||54679|).
+<-CLI:RETR README.txt
+->SRV:125 Data connection already open. Transfer starting.

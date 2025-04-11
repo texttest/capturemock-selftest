@@ -15,3 +15,6 @@ http
 
 # Tests for opc ua example
 opcua
+
+# Test for basic FTP client capture-replay
+ftp

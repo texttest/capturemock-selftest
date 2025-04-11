@@ -1,0 +1,7 @@
+Sent to server: Here is a string
+Got reply: Length was 16
+Sent to server: Here is a longer string
+Got reply: Length was 23
+Sent to server: Don't answer this one
+Timed out waiting for reply!
+Sent to server: terminate
