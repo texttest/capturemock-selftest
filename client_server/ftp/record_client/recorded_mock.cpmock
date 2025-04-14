@@ -5,13 +5,22 @@
 <-CLI:TYPE A
 ->SRV:200 Type set to: ASCII.
 <-CLI:EPSV
-->SRV:229 Entering extended passive mode (|||54673|).
+->SRV:229 Entering extended passive mode (|||63701|).
 <-CLI:LIST
-->LST:['-rw-rw-rw-   1 owner    group          10 Apr 11 15:00 README.txt']
+->LST:['-rw-rw-rw-   1 owner    group          10 Apr 14 09:34 README.txt']
 ->SRV:226 Transfer complete.
 <-CLI:TYPE A
 ->SRV:200 Type set to: ASCII.
 <-CLI:EPSV
-->SRV:229 Entering extended passive mode (|||54679|).
+->SRV:229 Entering extended passive mode (|||63707|).
 <-CLI:RETR README.txt
-->SRV:125 Data connection already open. Transfer starting.
+->FIL:README.txt
+->SRV:226 Transfer complete.
+<-CLI:TYPE A
+->SRV:200 Type set to: ASCII.
+<-CLI:EPSV
+->SRV:229 Entering extended passive mode (|||63713|).
+<-CLI:RETR no_such_file
+->SRV:550 No such file or directory.
+<-CLI:QUIT
+->SRV:221 Goodbye.

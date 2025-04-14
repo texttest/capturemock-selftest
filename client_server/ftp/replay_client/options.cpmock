@@ -1,1 +1,1 @@
--p mocks/test_replay_client.mock
+-p mocks/test_replay_client.mock -f mocks/test_replay.files

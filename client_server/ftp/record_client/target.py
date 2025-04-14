@@ -28,12 +28,10 @@ serverPath = os.path.join(os.getenv("TEXTTEST_SANDBOX"), "target_modules", "serv
 os.mkdir("ftp_server_dir")
 with open("ftp_server_dir/README.txt", "w") as f:
     print("The data", file=f)
-serverProc = subprocess.Popen([ sys.executable, serverPath ], stdout=subprocess.PIPE, stderr=open("server_errors.cpmock", "w"), cwd=os.path.abspath("ftp_server_dir"))
+serverProc = subprocess.Popen([ sys.executable, serverPath ], stdout=subprocess.PIPE, stderr=open("server_errors.txt", "w"), cwd=os.path.abspath("ftp_server_dir"))
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
-print("Server", serverAddress)
 sendServerAddress(serverAddress)
 clientThread.join()
-output, _ = serverProc.communicate()
 try:
     serverProc.terminate()
 except:
