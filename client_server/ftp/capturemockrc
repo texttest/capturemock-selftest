@@ -1,0 +1,4 @@
+[general]
+server_protocol = ftp
+log_config_file = logging
+record_for_client = true
