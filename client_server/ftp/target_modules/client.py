@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import sys
+import sys, os
 from ftplib import FTP, error_perm
 
 servAddr = sys.argv[1]
@@ -14,6 +14,7 @@ try:
     ftp.retrlines('LIST')           # list directory contents
 
     ftp.retrlines('RETR README.txt')
+    ftp.retrlines('RETR /subdir/absfile.txt')
 
     try:
         ftp.retrlines('RETR no_such_file')

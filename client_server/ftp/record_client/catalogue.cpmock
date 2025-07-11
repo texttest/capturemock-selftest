@@ -2,8 +2,12 @@ The following new files/directories were created:
 <Test Directory>
 ----ftp_server_dir
 --------README.txt
+--------subdir
+------------absfile.txt
 ----mocks
 --------test.mock
 --------test_recorded.files
 ------------README.txt
+------------subdir
+----------------absfile.txt
 ----server_errors.txt

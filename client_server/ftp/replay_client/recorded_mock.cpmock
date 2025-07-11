@@ -5,21 +5,29 @@
 <-CLI:TYPE A
 ->SRV:200 Type set to: ASCII.
 <-CLI:PASV
-->SRV:227 Entering passive mode (::1,223,56).
+->SRV:227 Entering passive mode (::1,254,86).
 <-CLI:LIST
-->LST:['-rw-rw-rw-   1 owner    group          10 Apr 14 12:12 README.txt']
+->LST:['-rw-rw-rw-   1 owner    group          10 Jul 11 07:40 README.txt',
+ 'drwxrwxrwx   1 owner    group           0 Jul 11 07:40 subdir']
 ->SRV:226 Transfer complete.
 <-CLI:TYPE A
 ->SRV:200 Type set to: ASCII.
 <-CLI:PASV
-->SRV:227 Entering passive mode (::1,223,63).
+->SRV:227 Entering passive mode (::1,254,93).
 <-CLI:RETR README.txt
 ->FIL:README.txt
 ->SRV:226 Transfer complete.
 <-CLI:TYPE A
 ->SRV:200 Type set to: ASCII.
 <-CLI:PASV
-->SRV:227 Entering passive mode (::1,223,70).
+->SRV:227 Entering passive mode (::1,254,100).
+<-CLI:RETR /subdir/absfile.txt
+->FIL:/subdir/absfile.txt
+->SRV:226 Transfer complete.
+<-CLI:TYPE A
+->SRV:200 Type set to: ASCII.
+<-CLI:PASV
+->SRV:227 Entering passive mode (::1,254,107).
 <-CLI:RETR no_such_file
 ->SRV:550 No such file or directory.
 <-CLI:QUIT

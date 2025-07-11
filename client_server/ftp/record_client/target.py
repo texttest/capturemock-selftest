@@ -25,9 +25,11 @@ clientThread = Thread(target=runClientThread)
 clientThread.start()
 serverPath = os.path.join(os.getenv("TEXTTEST_SANDBOX"), "target_modules", "server.py")
 
-os.mkdir("ftp_server_dir")
+os.makedirs("ftp_server_dir/subdir")
 with open("ftp_server_dir/README.txt", "w") as f:
     print("The data", file=f)
+with open("ftp_server_dir/subdir/absfile.txt", "w") as f:
+    print("Data in absfile", file=f)
 serverProc = subprocess.Popen([ sys.executable, serverPath ], stdout=subprocess.PIPE, stderr=open("server_errors.txt", "w"), cwd=os.path.abspath("ftp_server_dir"))
 serverAddress = serverProc.stdout.readline().strip().split()[-1]
 sendServerAddress(serverAddress)

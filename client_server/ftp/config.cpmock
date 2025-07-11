@@ -1,5 +1,6 @@
 [collate_file]
 recorded_*:*/test_recorded.files/*
+recorded_*:*/test_recorded.files/*/*
 
 [run_dependent_text]
 recorded_mock:extended passive mode{WORD -1}
