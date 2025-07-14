@@ -18,3 +18,4 @@ opcua
 
 # Test for basic FTP client capture-replay
 ftp
+udp_broadcast

@@ -1,0 +1,5 @@
+[general]
+server_protocol = classic_udp
+broadcast = true
+log_config_file = logging
+record_for_client = true
