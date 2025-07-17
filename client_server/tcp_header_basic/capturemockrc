@@ -2,6 +2,8 @@
 server_protocol = tcp_header
 log_config_file = logging
 record_for_client = true
+preserve_cr = true
+preserve_lf = true
 
 [tcp_header]
 format = >I
