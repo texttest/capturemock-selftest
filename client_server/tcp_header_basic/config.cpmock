@@ -1,0 +1,3 @@
+[run_dependent_text]
+# blank lines caused by test using Windows line-endings but running on Linux also
+stdout:^$
