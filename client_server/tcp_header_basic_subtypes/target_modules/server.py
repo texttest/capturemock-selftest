@@ -4,8 +4,9 @@ import socket, time
 
 def send_data(conn_sock, field, value):
     sendBytes = b""
-    for item in [ 16, 1, field, value ]:
+    for item in [ 20, 1, field, value ]:
         sendBytes += item.to_bytes(4)
+    sendBytes += b"abcd"
     conn_sock.send(sendBytes)
     print("Sent to server:", field, value)
 

@@ -1,5 +1,5 @@
 <-CLI:connect
 ->SRV:1 {'subtype': 1}
-{'precipitation': 'rain'}
+{'precipitation': 'rain', 'data': '61626364'}
 ->SRV:1 {'subtype': 2}
-{'temperature': 'cold'}
+{'temperature': 'cold', 'data': '61626364'}

@@ -10,8 +10,9 @@ def readValue(sock):
             msgType = int.from_bytes(lengthBytes[4:])
             responseBytes = sock.recv(length - 8)
             subType = int.from_bytes(responseBytes[:4])
-            value = int.from_bytes(responseBytes[4:])
-            print("Got reply:", msgType, subType, value)
+            value = int.from_bytes(responseBytes[4:8])
+            data = responseBytes[8:].decode()
+            print("Got reply:", msgType, subType, value, data)
     except TimeoutError:
         print("Timed out waiting for reply!")
 
