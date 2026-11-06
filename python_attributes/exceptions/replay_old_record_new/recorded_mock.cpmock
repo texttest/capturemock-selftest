@@ -12,6 +12,8 @@
 <-PYT:import fakeurllib
 <-PYT:fakeurllib.__name__
 ->RET:raise AttributeError("'NoneType' object has no attribute '__name__'")
+<-PYT:fakeurllib.__path__
+->RET:raise AttributeError("'NoneType' object has no attribute '__path__'")
 <-PYT:fakeurllib.urlopen('foo://no.such.site')
 ->RET:raise Instance('URLError(IOError)', 'urlerror1')
 <-PYT:urlerror1.args
