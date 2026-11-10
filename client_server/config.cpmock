@@ -1,2 +1,3 @@
 [run_dependent_text]
 *:[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*:[0-9]*{REPLACE <host:port>}
+recorded_mock:^ *<style{[->]}^ *</style
