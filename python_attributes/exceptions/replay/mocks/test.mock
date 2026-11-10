@@ -24,7 +24,3 @@
 ->RET:"<urlopen error (-2, 'Now you're really getting on my nerves!')>"
 <-PYT:urlerror1.__suppress_context__
 ->RET:False
-<-PYT:urlerror1.__bool__
-->RET:raise AttributeError("'URLError' object has no attribute '__bool__'")
-<-PYT:urlerror1.__len__
-->RET:raise AttributeError("'URLError' object has no attribute '__len__'")

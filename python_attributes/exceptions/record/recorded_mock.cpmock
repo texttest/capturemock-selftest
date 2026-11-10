@@ -24,7 +24,3 @@
 ->RET:'<urlopen error unknown url type: foo>'
 <-PYT:urlerror1.__suppress_context__
 ->RET:False
-<-PYT:urlerror1.__bool__
-->RET:raise AttributeError("'URLError' object has no attribute '__bool__'")
-<-PYT:urlerror1.__len__
-->RET:raise AttributeError("'URLError' object has no attribute '__len__'")

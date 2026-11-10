@@ -24,9 +24,3 @@
 ->RET:"<urlopen error (-2, 'Now you're really getting on my nerves!')>"
 <-PYT:urlerror2.__suppress_context__
 ->RET:False
-<-PYT:urlerror2.__bool__()
-->RET:False
-<-PYT:urlerror2.__bool__()
-->RET:False
-<-PYT:urlerror2.__bool__()
-->RET:False
