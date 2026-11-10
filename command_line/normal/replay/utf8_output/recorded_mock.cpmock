@@ -1,0 +1,2 @@
+<-CMD:utf8call Größe ō
+->OUT:utf8call called with ['Größe', 'ō']

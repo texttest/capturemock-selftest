@@ -1,0 +1,5 @@
+[command line]
+intercepts = utf8call
+
+[utf8call]
+encoding = utf-8

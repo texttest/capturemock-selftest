@@ -33,3 +33,6 @@ replay_bad_mock
 
 # Replay non-ASCII text, which the system under test receives in the locale encoding
 non_ascii
+
+# Replay UTF-8 output, set with "encoding" in capturemockrc
+utf8_output
