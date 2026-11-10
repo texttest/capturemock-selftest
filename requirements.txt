@@ -1,0 +1,5 @@
+# Third-party packages needed by the system under test in some self-tests.
+# CaptureMock itself is installed separately, see README.md.
+pyftpdlib     # client_server/ftp
+opcua         # client_server/opcua
+cryptography  # client_server/opcua, avoids a warning on stderr
