@@ -30,3 +30,6 @@ argument_repeat
 
 # Replay a mock file with some funny things in it
 replay_bad_mock
+
+# Replay non-ASCII text, which the system under test receives in the locale encoding
+non_ascii

@@ -1,0 +1,5 @@
+<-CMD:secondcall Größe
+->OUT:The current working directory is non_ascii
+The process ID is <pid>
+->ERR:secondcall called with ['Größe'] as arguments
+MY_ENV_VAR = None
