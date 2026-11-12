@@ -1,5 +1,6 @@
 replay
 
-# Does not work on Windows - python bugs are the basic cause
+# Not run on Windows: the server runs "editor", which finds the synchronous command_line/source_nt/editor.exe
+# on PATH rather than this test's asynchronous editor.py
 record
 record_new_replay_old
