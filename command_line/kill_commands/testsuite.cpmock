@@ -1,4 +1,6 @@
+# None of these run on Windows (testsuite.cpmock.nt is empty). Passing on a kill of an intercepted command
+# to the real one only works on UNIX: on Windows the kill is TerminateProcess, which the intercept can't catch,
+# so record can't work, and there's no point replaying what can't be recorded.
 replay
 
-# Doesn't work on Windows...
 record

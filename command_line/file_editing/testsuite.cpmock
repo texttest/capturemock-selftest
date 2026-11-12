@@ -7,5 +7,7 @@ asynchronous_edits
 # Track files that get deleted as well as changed
 file_deletion
 
-# Tests for recording/replaying edits of links on UNIX
+# Tests for recording/replaying edits of links on UNIX. Not run on Windows: symlinks there need special
+# privileges and CaptureMock's link handling assumes POSIX paths. The server would also run the synchronous
+# command_line/source_nt/editor.exe on PATH rather than this suite's editor.py.
 symbolic_links
