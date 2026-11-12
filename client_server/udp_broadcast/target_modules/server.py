@@ -1,6 +1,6 @@
 import socket, time, os
 
-LISTEN_IP = '127.0.0.1'  # Listen on all interfaces
+LISTEN_IP = '0.0.0.0'  # Listen on all interfaces
 PORT = 0
 
 # Create UDP socket
